@@ -82,5 +82,15 @@ namespace Ticari_Otomasyon
 				frmGiderler.Show();
 			}
 		}
+		FrmBankalar frmBankalar;
+		private void btnBankalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			if(frmBankalar == null || frmBankalar.IsDisposed)
+			{
+				frmBankalar = new FrmBankalar();
+				frmBankalar.MdiParent = this;
+				frmBankalar.Show();
+			}
+		}
 	}
 }

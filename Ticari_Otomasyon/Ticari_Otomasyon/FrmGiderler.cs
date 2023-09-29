@@ -29,6 +29,7 @@ namespace Ticari_Otomasyon
 
 		private void FrmGiderler_Load(object sender, EventArgs e)
 		{
+			//Listele
 			Listele();
 		}
 
