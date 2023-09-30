@@ -69,6 +69,24 @@
     <Compile Include="FrmBankalar.Designer.cs">
       <DependentUpon>FrmBankalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFaturaBilgiDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFaturaBilgiDetay.Designer.cs">
+      <DependentUpon>FrmFaturaBilgiDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFaturaBilgiDetayDüzenleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFaturaBilgiDetayDüzenleme.Designer.cs">
+      <DependentUpon>FrmFaturaBilgiDetayDüzenleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFaturalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFaturalar.Designer.cs">
+      <DependentUpon>FrmFaturalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFirmalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +137,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBankalar.resx">
       <DependentUpon>FrmBankalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFaturaBilgiDetay.resx">
+      <DependentUpon>FrmFaturaBilgiDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFaturaBilgiDetayDüzenleme.resx">
+      <DependentUpon>FrmFaturaBilgiDetayDüzenleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFaturalar.resx">
+      <DependentUpon>FrmFaturalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFirmalar.resx">
       <DependentUpon>FrmFirmalar.cs</DependentUpon>
