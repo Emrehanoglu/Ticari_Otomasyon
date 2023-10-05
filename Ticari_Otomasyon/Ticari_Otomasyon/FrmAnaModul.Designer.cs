@@ -44,6 +44,8 @@
 			this.btnRehber = new DevExpress.XtraBars.BarButtonItem();
 			this.btnFaturalar = new DevExpress.XtraBars.BarButtonItem();
 			this.btnAyarlar = new DevExpress.XtraBars.BarButtonItem();
+			this.btnHareketler = new DevExpress.XtraBars.BarButtonItem();
+			this.btnRaporlar = new DevExpress.XtraBars.BarButtonItem();
 			this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
 			this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
 			this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -68,13 +70,15 @@
             this.btnBankalar,
             this.btnRehber,
             this.btnFaturalar,
-            this.btnAyarlar});
+            this.btnAyarlar,
+            this.btnHareketler,
+            this.btnRaporlar});
 			this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-			this.ribbonControl1.MaxItemId = 14;
+			this.ribbonControl1.MaxItemId = 16;
 			this.ribbonControl1.Name = "ribbonControl1";
 			this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-			this.ribbonControl1.Size = new System.Drawing.Size(851, 141);
+			this.ribbonControl1.Size = new System.Drawing.Size(973, 141);
 			// 
 			// btnUrunler
 			// 
@@ -189,6 +193,23 @@
 			this.btnAyarlar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAyarlar.ImageOptions.LargeImage")));
 			this.btnAyarlar.Name = "btnAyarlar";
 			// 
+			// btnHareketler
+			// 
+			this.btnHareketler.Caption = "Hareketler";
+			this.btnHareketler.Id = 14;
+			this.btnHareketler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHareketler.ImageOptions.Image")));
+			this.btnHareketler.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHareketler.ImageOptions.LargeImage")));
+			this.btnHareketler.Name = "btnHareketler";
+			this.btnHareketler.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHareketler_ItemClick);
+			// 
+			// btnRaporlar
+			// 
+			this.btnRaporlar.Caption = "Raporlar";
+			this.btnRaporlar.Id = 15;
+			this.btnRaporlar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRaporlar.ImageOptions.Image")));
+			this.btnRaporlar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRaporlar.ImageOptions.LargeImage")));
+			this.btnRaporlar.Name = "btnRaporlar";
+			// 
 			// ribbonPage1
 			// 
 			this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -209,7 +230,9 @@
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnNotlar);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnBankalar);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnRehber);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnHareketler);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnFaturalar);
+			this.ribbonPageGroup1.ItemLinks.Add(this.btnRaporlar);
 			this.ribbonPageGroup1.ItemLinks.Add(this.btnAyarlar);
 			this.ribbonPageGroup1.Name = "ribbonPageGroup1";
 			// 
@@ -221,7 +244,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(851, 791);
+			this.ClientSize = new System.Drawing.Size(973, 791);
 			this.Controls.Add(this.ribbonControl1);
 			this.IsMdiContainer = true;
 			this.Name = "Form1";
@@ -254,6 +277,8 @@
 		private DevExpress.XtraBars.BarButtonItem btnFaturalar;
 		private DevExpress.XtraBars.BarButtonItem btnAyarlar;
 		private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+		private DevExpress.XtraBars.BarButtonItem btnHareketler;
+		private DevExpress.XtraBars.BarButtonItem btnRaporlar;
 	}
 }
 
