@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,24 @@ namespace Ticari_Otomasyon
 		SqlConnectionClass baglan = new SqlConnectionClass();
 		private void FrmStoklar_Load(object sender, EventArgs e)
 		{
-			chartControl1.Series["Series 1"].Points.AddPoint("İstanbul", 4);
-			chartControl1.Series["Series 1"].Points.AddPoint("Ankara", 3);
-			chartControl1.Series["Series 1"].Points.AddPoint("İzmir", 5);
-			chartControl1.Series["Series 1"].Points.AddPoint("Muğla", 10);
+			Listele();
+
+			SqlCommand komut = new SqlCommand("select UrunAd,Sum(Adet) from Tbl_Urunler group by UrunAd", baglan.baglanti());
+			SqlDataReader dr = komut.ExecuteReader();
+			while (dr.Read())
+			{
+				chartControl1.Series["Series 1"].Points.AddPoint(Convert.ToString(dr[0]), int.Parse(dr[1].ToString()));
+			}
+			baglan.baglanti().Close();
+
+
+		}
+		void Listele()
+		{
+			SqlDataAdapter komut = new SqlDataAdapter("select UrunAd,Sum(Adet) from Tbl_Urunler group by UrunAd", baglan.baglanti());
+			DataTable dt = new DataTable();
+			komut.Fill(dt);
+			gridControl1.DataSource = dt;
 		}
 	}
 }
