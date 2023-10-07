@@ -22,7 +22,7 @@ namespace Ticari_Otomasyon
 		{
 			Listele();
 
-			SqlCommand komut = new SqlCommand("select UrunAd,Sum(Adet) from Tbl_Urunler group by UrunAd", baglan.baglanti());
+			SqlCommand komut = new SqlCommand("select UrunAd,Sum(Adet) as Adet from Tbl_Urunler group by UrunAd", baglan.baglanti());
 			SqlDataReader dr = komut.ExecuteReader();
 			while (dr.Read())
 			{
@@ -30,14 +30,27 @@ namespace Ticari_Otomasyon
 			}
 			baglan.baglanti().Close();
 
+			SqlCommand komut2 = new SqlCommand("select Il,Count(*) as Toplam from Tbl_Firmalar group by Il", baglan.baglanti());
+			SqlDataReader dr2 = komut2.ExecuteReader();
+			while (dr2.Read())
+			{
+				chartControl2.Series["Series 1"].Points.AddPoint(Convert.ToString(dr2[0]), int.Parse(dr2[1].ToString()));
+			}
+			baglan.baglanti().Close();
+
 
 		}
 		void Listele()
 		{
-			SqlDataAdapter komut = new SqlDataAdapter("select UrunAd,Sum(Adet) from Tbl_Urunler group by UrunAd", baglan.baglanti());
+			SqlDataAdapter komut = new SqlDataAdapter("select UrunAd,Sum(Adet) as Adet from Tbl_Urunler group by UrunAd", baglan.baglanti());
 			DataTable dt = new DataTable();
 			komut.Fill(dt);
 			gridControl1.DataSource = dt;
+
+			SqlDataAdapter komut2 = new SqlDataAdapter("select Il,Count(*) as Toplam from Tbl_Firmalar group by Il", baglan.baglanti());
+			DataTable dt2 = new DataTable();
+			komut2.Fill(dt2);
+			gridControl2.DataSource = dt2;
 		}
 	}
 }
