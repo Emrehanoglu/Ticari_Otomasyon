@@ -52,7 +52,7 @@
 			this.Musteriler.Location = new System.Drawing.Point(0, 0);
 			this.Musteriler.Name = "Musteriler";
 			this.Musteriler.SelectedTabPage = this.Müşteriler;
-			this.Musteriler.Size = new System.Drawing.Size(851, 791);
+			this.Musteriler.Size = new System.Drawing.Size(973, 791);
 			this.Musteriler.TabIndex = 0;
 			this.Musteriler.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Müşteriler,
@@ -63,7 +63,7 @@
 			this.Müşteriler.Controls.Add(this.gridControl1);
 			this.Müşteriler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Müşteriler.ImageOptions.Image")));
 			this.Müşteriler.Name = "Müşteriler";
-			this.Müşteriler.Size = new System.Drawing.Size(845, 744);
+			this.Müşteriler.Size = new System.Drawing.Size(967, 744);
 			this.Müşteriler.Text = "Müşteriler";
 			// 
 			// gridControl1
@@ -72,7 +72,7 @@
 			this.gridControl1.Location = new System.Drawing.Point(0, 0);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(845, 744);
+			this.gridControl1.Size = new System.Drawing.Size(967, 744);
 			this.gridControl1.TabIndex = 5;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -97,7 +97,7 @@
 			this.xtraTabPage2.Controls.Add(this.gridControl2);
 			this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
 			this.xtraTabPage2.Name = "xtraTabPage2";
-			this.xtraTabPage2.Size = new System.Drawing.Size(845, 763);
+			this.xtraTabPage2.Size = new System.Drawing.Size(845, 744);
 			this.xtraTabPage2.Text = "Firmalar";
 			// 
 			// gridControl2
@@ -106,7 +106,7 @@
 			this.gridControl2.Location = new System.Drawing.Point(0, 0);
 			this.gridControl2.MainView = this.gridView2;
 			this.gridControl2.Name = "gridControl2";
-			this.gridControl2.Size = new System.Drawing.Size(845, 763);
+			this.gridControl2.Size = new System.Drawing.Size(845, 744);
 			this.gridControl2.TabIndex = 6;
 			this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -122,7 +122,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(851, 791);
+			this.ClientSize = new System.Drawing.Size(973, 791);
 			this.Controls.Add(this.Musteriler);
 			this.Name = "FrmRehber";
 			this.Text = "Rehber";

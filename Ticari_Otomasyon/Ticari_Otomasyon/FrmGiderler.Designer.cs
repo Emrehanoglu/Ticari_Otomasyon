@@ -30,6 +30,12 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGiderler));
 			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+			this.txtMaaslar = new DevExpress.XtraEditors.TextEdit();
+			this.txtInternet = new DevExpress.XtraEditors.TextEdit();
+			this.txtSu = new DevExpress.XtraEditors.TextEdit();
+			this.txtElektrik = new DevExpress.XtraEditors.TextEdit();
+			this.cmBoxYil = new System.Windows.Forms.ComboBox();
+			this.cmBoxAy = new System.Windows.Forms.ComboBox();
 			this.richTxtNotlar = new System.Windows.Forms.RichTextBox();
 			this.txtDogalgaz = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -49,23 +55,17 @@
 			this.txtId = new DevExpress.XtraEditors.TextEdit();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-			this.cmBoxAy = new System.Windows.Forms.ComboBox();
-			this.cmBoxYil = new System.Windows.Forms.ComboBox();
-			this.txtElektrik = new DevExpress.XtraEditors.TextEdit();
-			this.txtSu = new DevExpress.XtraEditors.TextEdit();
-			this.txtInternet = new DevExpress.XtraEditors.TextEdit();
-			this.txtMaaslar = new DevExpress.XtraEditors.TextEdit();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
 			this.groupControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtMaaslar.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtInternet.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtSu.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtElektrik.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDogalgaz.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtEkstra.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtElektrik.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtSu.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtInternet.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtMaaslar.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupControl1
@@ -93,11 +93,76 @@
 			this.groupControl1.Controls.Add(this.labelControl2);
 			this.groupControl1.Controls.Add(this.labelControl1);
 			this.groupControl1.Controls.Add(this.txtId);
-			this.groupControl1.Location = new System.Drawing.Point(630, 1);
+			this.groupControl1.Location = new System.Drawing.Point(751, 1);
 			this.groupControl1.Name = "groupControl1";
-			this.groupControl1.Size = new System.Drawing.Size(220, 615);
+			this.groupControl1.Size = new System.Drawing.Size(220, 788);
 			this.groupControl1.TabIndex = 7;
 			this.groupControl1.Text = "Müşteriler";
+			// 
+			// txtMaaslar
+			// 
+			this.txtMaaslar.Location = new System.Drawing.Point(78, 288);
+			this.txtMaaslar.Name = "txtMaaslar";
+			this.txtMaaslar.Size = new System.Drawing.Size(100, 20);
+			this.txtMaaslar.TabIndex = 40;
+			// 
+			// txtInternet
+			// 
+			this.txtInternet.Location = new System.Drawing.Point(78, 255);
+			this.txtInternet.Name = "txtInternet";
+			this.txtInternet.Size = new System.Drawing.Size(100, 20);
+			this.txtInternet.TabIndex = 39;
+			// 
+			// txtSu
+			// 
+			this.txtSu.Location = new System.Drawing.Point(78, 188);
+			this.txtSu.Name = "txtSu";
+			this.txtSu.Size = new System.Drawing.Size(100, 20);
+			this.txtSu.TabIndex = 38;
+			// 
+			// txtElektrik
+			// 
+			this.txtElektrik.Location = new System.Drawing.Point(78, 153);
+			this.txtElektrik.Name = "txtElektrik";
+			this.txtElektrik.Size = new System.Drawing.Size(100, 20);
+			this.txtElektrik.TabIndex = 37;
+			// 
+			// cmBoxYil
+			// 
+			this.cmBoxYil.FormattingEnabled = true;
+			this.cmBoxYil.Items.AddRange(new object[] {
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023"});
+			this.cmBoxYil.Location = new System.Drawing.Point(78, 118);
+			this.cmBoxYil.Name = "cmBoxYil";
+			this.cmBoxYil.Size = new System.Drawing.Size(100, 21);
+			this.cmBoxYil.TabIndex = 36;
+			// 
+			// cmBoxAy
+			// 
+			this.cmBoxAy.FormattingEnabled = true;
+			this.cmBoxAy.Items.AddRange(new object[] {
+            "Ocak",
+            "Şubat",
+            "Mart",
+            "Nisan",
+            "Mayıs",
+            "Haziran",
+            "Temmuz",
+            "Ağustos",
+            "Eylül",
+            "Ekim",
+            "Kasım",
+            "Aralık"});
+			this.cmBoxAy.Location = new System.Drawing.Point(78, 82);
+			this.cmBoxAy.Name = "cmBoxAy";
+			this.cmBoxAy.Size = new System.Drawing.Size(100, 21);
+			this.cmBoxAy.TabIndex = 35;
 			// 
 			// richTxtNotlar
 			// 
@@ -250,81 +315,16 @@
 			this.gridControl1.Location = new System.Drawing.Point(1, 1);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(623, 615);
+			this.gridControl1.Size = new System.Drawing.Size(744, 788);
 			this.gridControl1.TabIndex = 6;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-			// 
-			// cmBoxAy
-			// 
-			this.cmBoxAy.FormattingEnabled = true;
-			this.cmBoxAy.Items.AddRange(new object[] {
-            "Ocak",
-            "Şubat",
-            "Mart",
-            "Nisan",
-            "Mayıs",
-            "Haziran",
-            "Temmuz",
-            "Ağustos",
-            "Eylül",
-            "Ekim",
-            "Kasım",
-            "Aralık"});
-			this.cmBoxAy.Location = new System.Drawing.Point(78, 82);
-			this.cmBoxAy.Name = "cmBoxAy";
-			this.cmBoxAy.Size = new System.Drawing.Size(100, 21);
-			this.cmBoxAy.TabIndex = 35;
-			// 
-			// cmBoxYil
-			// 
-			this.cmBoxYil.FormattingEnabled = true;
-			this.cmBoxYil.Items.AddRange(new object[] {
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023"});
-			this.cmBoxYil.Location = new System.Drawing.Point(78, 118);
-			this.cmBoxYil.Name = "cmBoxYil";
-			this.cmBoxYil.Size = new System.Drawing.Size(100, 21);
-			this.cmBoxYil.TabIndex = 36;
-			// 
-			// txtElektrik
-			// 
-			this.txtElektrik.Location = new System.Drawing.Point(78, 153);
-			this.txtElektrik.Name = "txtElektrik";
-			this.txtElektrik.Size = new System.Drawing.Size(100, 20);
-			this.txtElektrik.TabIndex = 37;
-			// 
-			// txtSu
-			// 
-			this.txtSu.Location = new System.Drawing.Point(78, 188);
-			this.txtSu.Name = "txtSu";
-			this.txtSu.Size = new System.Drawing.Size(100, 20);
-			this.txtSu.TabIndex = 38;
-			// 
-			// txtInternet
-			// 
-			this.txtInternet.Location = new System.Drawing.Point(78, 255);
-			this.txtInternet.Name = "txtInternet";
-			this.txtInternet.Size = new System.Drawing.Size(100, 20);
-			this.txtInternet.TabIndex = 39;
-			// 
-			// txtMaaslar
-			// 
-			this.txtMaaslar.Location = new System.Drawing.Point(78, 288);
-			this.txtMaaslar.Name = "txtMaaslar";
-			this.txtMaaslar.Size = new System.Drawing.Size(100, 20);
-			this.txtMaaslar.TabIndex = 40;
 			// 
 			// FrmGiderler
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(851, 616);
+			this.ClientSize = new System.Drawing.Size(973, 791);
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FrmGiderler";
@@ -333,15 +333,15 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
 			this.groupControl1.ResumeLayout(false);
 			this.groupControl1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtMaaslar.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtInternet.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtSu.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtElektrik.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtDogalgaz.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtEkstra.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtElektrik.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtSu.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtInternet.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtMaaslar.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}

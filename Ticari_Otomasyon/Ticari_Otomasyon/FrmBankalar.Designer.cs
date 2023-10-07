@@ -39,6 +39,9 @@
 			this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
 			this.txtHesapTürü = new DevExpress.XtraEditors.TextEdit();
 			this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+			this.txtHesapNo = new DevExpress.XtraEditors.TextEdit();
+			this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
 			this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
 			this.txtIban = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -56,9 +59,6 @@
 			this.txtBankaAd = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
 			this.txtId = new DevExpress.XtraEditors.TextEdit();
-			this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-			this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-			this.txtHesapNo = new DevExpress.XtraEditors.TextEdit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cmBoxİlçe.Properties)).BeginInit();
@@ -67,12 +67,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtHesapTürü.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
 			this.groupControl1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtHesapNo.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtIban.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSube.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtBankaAd.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtHesapNo.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gridView1
@@ -87,7 +87,7 @@
 			this.gridControl1.Location = new System.Drawing.Point(1, 1);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(623, 615);
+			this.gridControl1.Size = new System.Drawing.Size(745, 786);
 			this.gridControl1.TabIndex = 4;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -179,11 +179,38 @@
 			this.groupControl1.Controls.Add(this.txtBankaAd);
 			this.groupControl1.Controls.Add(this.labelControl1);
 			this.groupControl1.Controls.Add(this.txtId);
-			this.groupControl1.Location = new System.Drawing.Point(630, 1);
+			this.groupControl1.Location = new System.Drawing.Point(752, 1);
 			this.groupControl1.Name = "groupControl1";
-			this.groupControl1.Size = new System.Drawing.Size(220, 615);
+			this.groupControl1.Size = new System.Drawing.Size(220, 786);
 			this.groupControl1.TabIndex = 5;
 			this.groupControl1.Text = "Müşteriler";
+			// 
+			// labelControl10
+			// 
+			this.labelControl10.Location = new System.Drawing.Point(19, 214);
+			this.labelControl10.Name = "labelControl10";
+			this.labelControl10.Size = new System.Drawing.Size(53, 13);
+			this.labelControl10.TabIndex = 41;
+			this.labelControl10.Text = "Hesap No :";
+			// 
+			// txtHesapNo
+			// 
+			this.txtHesapNo.Location = new System.Drawing.Point(78, 211);
+			this.txtHesapNo.Name = "txtHesapNo";
+			this.txtHesapNo.Size = new System.Drawing.Size(100, 20);
+			this.txtHesapNo.TabIndex = 40;
+			// 
+			// lookUpEdit1
+			// 
+			this.lookUpEdit1.Location = new System.Drawing.Point(79, 351);
+			this.lookUpEdit1.Name = "lookUpEdit1";
+			this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.lookUpEdit1.Properties.DisplayMember = "Ad";
+			this.lookUpEdit1.Properties.NullText = "Firma Seçiniz";
+			this.lookUpEdit1.Properties.ValueMember = "Id";
+			this.lookUpEdit1.Size = new System.Drawing.Size(99, 20);
+			this.lookUpEdit1.TabIndex = 39;
 			// 
 			// labelControl6
 			// 
@@ -323,38 +350,11 @@
 			this.txtId.Size = new System.Drawing.Size(100, 20);
 			this.txtId.TabIndex = 0;
 			// 
-			// lookUpEdit1
-			// 
-			this.lookUpEdit1.Location = new System.Drawing.Point(79, 351);
-			this.lookUpEdit1.Name = "lookUpEdit1";
-			this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-			this.lookUpEdit1.Properties.DisplayMember = "Ad";
-			this.lookUpEdit1.Properties.NullText = "Firma Seçiniz";
-			this.lookUpEdit1.Properties.ValueMember = "Id";
-			this.lookUpEdit1.Size = new System.Drawing.Size(99, 20);
-			this.lookUpEdit1.TabIndex = 39;
-			// 
-			// labelControl10
-			// 
-			this.labelControl10.Location = new System.Drawing.Point(19, 214);
-			this.labelControl10.Name = "labelControl10";
-			this.labelControl10.Size = new System.Drawing.Size(53, 13);
-			this.labelControl10.TabIndex = 41;
-			this.labelControl10.Text = "Hesap No :";
-			// 
-			// txtHesapNo
-			// 
-			this.txtHesapNo.Location = new System.Drawing.Point(78, 211);
-			this.txtHesapNo.Name = "txtHesapNo";
-			this.txtHesapNo.Size = new System.Drawing.Size(100, 20);
-			this.txtHesapNo.TabIndex = 40;
-			// 
 			// FrmBankalar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(851, 616);
+			this.ClientSize = new System.Drawing.Size(973, 791);
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FrmBankalar";
@@ -369,12 +369,12 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
 			this.groupControl1.ResumeLayout(false);
 			this.groupControl1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtHesapNo.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtIban.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSube.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtBankaAd.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtHesapNo.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}

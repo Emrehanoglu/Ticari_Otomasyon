@@ -52,6 +52,8 @@
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.txtSiraNo = new DevExpress.XtraEditors.TextEdit();
 			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+			this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
+			this.txtFaturaId = new DevExpress.XtraEditors.TextEdit();
 			this.txtFiyat = new DevExpress.XtraEditors.TextEdit();
 			this.txtTutar = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -70,8 +72,6 @@
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-			this.txtFaturaId = new DevExpress.XtraEditors.TextEdit();
-			this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
 			this.xtraTabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
 			this.groupControl4.SuspendLayout();
@@ -88,6 +88,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtSiraNo.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
 			this.groupControl5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtUrunId.Properties)).BeginInit();
@@ -98,7 +99,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
 			this.xtraTabControl1.SuspendLayout();
 			this.xtraTabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// xtraTabPage1
@@ -108,7 +108,7 @@
 			this.xtraTabPage1.Controls.Add(this.groupControl2);
 			this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
 			this.xtraTabPage1.Name = "xtraTabPage1";
-			this.xtraTabPage1.Size = new System.Drawing.Size(238, 568);
+			this.xtraTabPage1.Size = new System.Drawing.Size(238, 742);
 			this.xtraTabPage1.Text = "Fatura Bilgileri";
 			// 
 			// groupControl4
@@ -122,7 +122,7 @@
 			this.groupControl4.Location = new System.Drawing.Point(3, 247);
 			this.groupControl4.Name = "groupControl4";
 			this.groupControl4.ShowCaption = false;
-			this.groupControl4.Size = new System.Drawing.Size(232, 340);
+			this.groupControl4.Size = new System.Drawing.Size(232, 489);
 			this.groupControl4.TabIndex = 2;
 			this.groupControl4.Text = "groupControl4";
 			// 
@@ -316,9 +316,26 @@
 			this.groupControl5.Location = new System.Drawing.Point(3, 3);
 			this.groupControl5.Name = "groupControl5";
 			this.groupControl5.ShowCaption = false;
-			this.groupControl5.Size = new System.Drawing.Size(232, 584);
+			this.groupControl5.Size = new System.Drawing.Size(232, 736);
 			this.groupControl5.TabIndex = 0;
 			this.groupControl5.Text = "groupControl5";
+			// 
+			// btnTemizle
+			// 
+			this.btnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTemizle.ImageOptions.Image")));
+			this.btnTemizle.Location = new System.Drawing.Point(78, 490);
+			this.btnTemizle.Name = "btnTemizle";
+			this.btnTemizle.Size = new System.Drawing.Size(100, 36);
+			this.btnTemizle.TabIndex = 37;
+			this.btnTemizle.Text = "Temizle";
+			this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+			// 
+			// txtFaturaId
+			// 
+			this.txtFaturaId.Location = new System.Drawing.Point(85, 183);
+			this.txtFaturaId.Name = "txtFaturaId";
+			this.txtFaturaId.Size = new System.Drawing.Size(100, 20);
+			this.txtFaturaId.TabIndex = 36;
 			// 
 			// txtFiyat
 			// 
@@ -438,7 +455,7 @@
 			this.gridControl1.Location = new System.Drawing.Point(1, 1);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(602, 615);
+			this.gridControl1.Size = new System.Drawing.Size(720, 789);
 			this.gridControl1.TabIndex = 7;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -453,10 +470,10 @@
 			// 
 			// xtraTabControl1
 			// 
-			this.xtraTabControl1.Location = new System.Drawing.Point(605, 1);
+			this.xtraTabControl1.Location = new System.Drawing.Point(727, 1);
 			this.xtraTabControl1.Name = "xtraTabControl1";
 			this.xtraTabControl1.SelectedTabPage = this.xtraTabPage2;
-			this.xtraTabControl1.Size = new System.Drawing.Size(244, 615);
+			this.xtraTabControl1.Size = new System.Drawing.Size(244, 789);
 			this.xtraTabControl1.TabIndex = 8;
 			this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -467,31 +484,14 @@
 			this.xtraTabPage2.Controls.Add(this.groupControl5);
 			this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
 			this.xtraTabPage2.Name = "xtraTabPage2";
-			this.xtraTabPage2.Size = new System.Drawing.Size(238, 568);
+			this.xtraTabPage2.Size = new System.Drawing.Size(238, 742);
 			this.xtraTabPage2.Text = "Fatura Detayları";
-			// 
-			// txtFaturaId
-			// 
-			this.txtFaturaId.Location = new System.Drawing.Point(85, 183);
-			this.txtFaturaId.Name = "txtFaturaId";
-			this.txtFaturaId.Size = new System.Drawing.Size(100, 20);
-			this.txtFaturaId.TabIndex = 36;
-			// 
-			// btnTemizle
-			// 
-			this.btnTemizle.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-			this.btnTemizle.Location = new System.Drawing.Point(78, 490);
-			this.btnTemizle.Name = "btnTemizle";
-			this.btnTemizle.Size = new System.Drawing.Size(100, 36);
-			this.btnTemizle.TabIndex = 37;
-			this.btnTemizle.Text = "Temizle";
-			this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
 			// 
 			// FrmFaturalar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(851, 616);
+			this.ClientSize = new System.Drawing.Size(973, 791);
 			this.Controls.Add(this.gridControl1);
 			this.Controls.Add(this.xtraTabControl1);
 			this.Name = "FrmFaturalar";
@@ -517,6 +517,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
 			this.groupControl5.ResumeLayout(false);
 			this.groupControl5.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtUrunId.Properties)).EndInit();
@@ -527,7 +528,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
 			this.xtraTabControl1.ResumeLayout(false);
 			this.xtraTabPage2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}
