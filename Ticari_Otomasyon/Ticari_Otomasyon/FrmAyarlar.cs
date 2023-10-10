@@ -28,6 +28,8 @@ namespace Ticari_Otomasyon
 		private void FrmAyarlar_Load(object sender, EventArgs e)
 		{
 			Listele();
+			txtKullaniciAdi.Text = "";
+			txtSifre.Text = "";
 		}
 
 		private void btnKaydet_Click(object sender, EventArgs e)
@@ -39,6 +41,28 @@ namespace Ticari_Otomasyon
 			baglan.baglanti().Close();
 			MessageBox.Show("Admin Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			Listele();
+		}
+
+		private void txtKullaniciAdi_TextChanged(object sender, EventArgs e)
+		{
+			if(txtKullaniciAdi.Text == "")
+			{
+				btnKaydet.Text = "Kaydet";
+			}
+			else
+			{
+				btnKaydet.Text = "Güncelle";
+			}
+		}
+
+		private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+		{
+			DataRow dr = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+			if(dr != null)
+			{
+				txtKullaniciAdi.Text = dr["KullaniciAdi"].ToString();
+				txtSifre.Text = dr["Sifre"].ToString();
+			}
 		}
 	}
 }

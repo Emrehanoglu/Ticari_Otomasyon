@@ -56,6 +56,7 @@
 			// 
 			this.gridView1.GridControl = this.gridControl1;
 			this.gridView1.Name = "gridView1";
+			this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
 			// 
 			// label1
 			// 
@@ -73,6 +74,7 @@
 			this.txtKullaniciAdi.Name = "txtKullaniciAdi";
 			this.txtKullaniciAdi.Size = new System.Drawing.Size(135, 20);
 			this.txtKullaniciAdi.TabIndex = 2;
+			this.txtKullaniciAdi.TextChanged += new System.EventHandler(this.txtKullaniciAdi_TextChanged);
 			// 
 			// simpleButton1
 			// 
