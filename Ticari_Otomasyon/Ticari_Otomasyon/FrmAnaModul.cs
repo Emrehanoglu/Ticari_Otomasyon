@@ -132,5 +132,14 @@ namespace Ticari_Otomasyon
 				frmStoklar.Show();
 			}
 		}
+		FrmAyarlar frmAyarlar;
+		private void btnAyarlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			if(frmAyarlar == null || frmAyarlar.IsDisposed)
+			{
+				frmAyarlar = new FrmAyarlar();
+				frmAyarlar.Show();
+			}
+		}
 	}
 }
