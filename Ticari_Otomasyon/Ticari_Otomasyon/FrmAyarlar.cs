@@ -34,12 +34,24 @@ namespace Ticari_Otomasyon
 
 		private void btnKaydet_Click(object sender, EventArgs e)
 		{
-			SqlCommand komut = new SqlCommand("insert into Tbl_Admin (KullaniciAdi,Sifre) values (@p1,@p2)",baglan.baglanti());
-			komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
-			komut.Parameters.AddWithValue("@p2", txtSifre.Text);
-			komut.ExecuteNonQuery();
-			baglan.baglanti().Close();
-			MessageBox.Show("Admin Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			if(btnKaydet.Text == "Kaydet")
+			{
+				SqlCommand komut = new SqlCommand("insert into Tbl_Admin (KullaniciAdi,Sifre) values (@p1,@p2)", baglan.baglanti());
+				komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+				komut.Parameters.AddWithValue("@p2", txtSifre.Text);
+				komut.ExecuteNonQuery();
+				baglan.baglanti().Close();
+				MessageBox.Show("Admin Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if(btnKaydet.Text == "Güncelle")
+			{
+				SqlCommand komut = new SqlCommand("update Tbl_Admin set Sifre=@p2 where KullaniciAdi=@p1", baglan.baglanti());
+				komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+				komut.Parameters.AddWithValue("@p2", txtSifre.Text);
+				komut.ExecuteNonQuery();
+				baglan.baglanti().Close();
+				MessageBox.Show("Admin Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
 			Listele();
 		}
 
