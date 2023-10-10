@@ -29,5 +29,16 @@ namespace Ticari_Otomasyon
 		{
 			Listele();
 		}
+
+		private void btnKaydet_Click(object sender, EventArgs e)
+		{
+			SqlCommand komut = new SqlCommand("insert into Tbl_Admin (KullaniciAdi,Sifre) values (@p1,@p2)",baglan.baglanti());
+			komut.Parameters.AddWithValue("@p1", txtKullaniciAdi.Text);
+			komut.Parameters.AddWithValue("@p2", txtSifre.Text);
+			komut.ExecuteNonQuery();
+			baglan.baglanti().Close();
+			MessageBox.Show("Admin Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			Listele();
+		}
 	}
 }

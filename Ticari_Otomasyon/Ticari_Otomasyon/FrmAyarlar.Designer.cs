@@ -115,6 +115,7 @@
 			this.btnKaydet.Size = new System.Drawing.Size(93, 35);
 			this.btnKaydet.TabIndex = 7;
 			this.btnKaydet.Text = "Kaydet";
+			this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
 			// 
 			// FrmAyarlar
 			// 
