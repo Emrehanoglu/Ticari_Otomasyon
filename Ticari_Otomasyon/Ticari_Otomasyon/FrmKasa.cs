@@ -52,7 +52,31 @@ namespace Ticari_Otomasyon
 				lblOdemeler.Text = dr2[0].ToString();
 			}
 			baglan.baglanti().Close();
-			
+
+			SqlCommand komut3 = new SqlCommand("select top 1 Maaslar from Tbl_Giderler order by Id desc", baglan.baglanti());
+			SqlDataReader dr3 = komut3.ExecuteReader();
+			while (dr3.Read())
+			{
+				lblPersonelMaaslari.Text = dr3[0].ToString();
+			}
+			baglan.baglanti().Close();
+
+			SqlCommand komut4 = new SqlCommand("select count(*) from Tbl_Musteriler", baglan.baglanti());
+			SqlDataReader dr4 = komut4.ExecuteReader();
+			while (dr4.Read())
+			{
+				lblMusteriSayisi.Text = dr4[0].ToString();
+			}
+			baglan.baglanti().Close();
+
+			SqlCommand komut5 = new SqlCommand("select count(*) from Tbl_Firmalar", baglan.baglanti());
+			SqlDataReader dr5 = komut5.ExecuteReader();
+			while (dr5.Read())
+			{
+				lblFirmaSayisi.Text = dr5[0].ToString();
+			}
+			baglan.baglanti().Close();
+
 		}
 	}
 }
