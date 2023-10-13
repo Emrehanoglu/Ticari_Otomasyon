@@ -59,17 +59,19 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.label10 = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
-			this.label12 = new System.Windows.Forms.Label();
-			this.label13 = new System.Windows.Forms.Label();
-			this.label14 = new System.Windows.Forms.Label();
-			this.label15 = new System.Windows.Forms.Label();
-			this.label16 = new System.Windows.Forms.Label();
-			this.label17 = new System.Windows.Forms.Label();
-			this.label18 = new System.Windows.Forms.Label();
+			this.lblToplamTutar = new System.Windows.Forms.Label();
+			this.lblOdemeler = new System.Windows.Forms.Label();
+			this.lblPersonelMaaslari = new System.Windows.Forms.Label();
+			this.lblMusteriSayisi = new System.Windows.Forms.Label();
+			this.lblFirmaSayisi = new System.Windows.Forms.Label();
+			this.lblSehirSayisi = new System.Windows.Forms.Label();
+			this.lblPersonelSayisi = new System.Windows.Forms.Label();
+			this.lblStokSayisi = new System.Windows.Forms.Label();
+			this.lblAktifKullanici = new System.Windows.Forms.Label();
 			this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
 			this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
+			this.gridControl3 = new DevExpress.XtraGrid.GridControl();
+			this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.Müşteriler.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -103,10 +105,13 @@
 			((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// Müşteriler
 			// 
+			this.Müşteriler.Controls.Add(this.gridControl3);
 			this.Müşteriler.Controls.Add(this.groupControl9);
 			this.Müşteriler.Controls.Add(this.groupControl5);
 			this.Müşteriler.Controls.Add(this.groupControl3);
@@ -127,7 +132,7 @@
 			this.gridControl1.Location = new System.Drawing.Point(284, 0);
 			this.gridControl1.MainView = this.gridView1;
 			this.gridControl1.Name = "gridControl1";
-			this.gridControl1.Size = new System.Drawing.Size(683, 753);
+			this.gridControl1.Size = new System.Drawing.Size(683, 230);
 			this.gridControl1.TabIndex = 5;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -186,7 +191,7 @@
 			// 
 			// groupControl1
 			// 
-			this.groupControl1.Controls.Add(this.label10);
+			this.groupControl1.Controls.Add(this.lblToplamTutar);
 			this.groupControl1.Controls.Add(this.label1);
 			this.groupControl1.Location = new System.Drawing.Point(3, 3);
 			this.groupControl1.Name = "groupControl1";
@@ -197,7 +202,7 @@
 			// 
 			// groupControl2
 			// 
-			this.groupControl2.Controls.Add(this.label11);
+			this.groupControl2.Controls.Add(this.lblOdemeler);
 			this.groupControl2.Controls.Add(this.label2);
 			this.groupControl2.Location = new System.Drawing.Point(3, 87);
 			this.groupControl2.Name = "groupControl2";
@@ -208,7 +213,7 @@
 			// 
 			// groupControl3
 			// 
-			this.groupControl3.Controls.Add(this.label13);
+			this.groupControl3.Controls.Add(this.lblMusteriSayisi);
 			this.groupControl3.Controls.Add(this.label4);
 			this.groupControl3.Location = new System.Drawing.Point(3, 255);
 			this.groupControl3.Name = "groupControl3";
@@ -219,7 +224,7 @@
 			// 
 			// groupControl4
 			// 
-			this.groupControl4.Controls.Add(this.label12);
+			this.groupControl4.Controls.Add(this.lblPersonelMaaslari);
 			this.groupControl4.Controls.Add(this.label3);
 			this.groupControl4.Location = new System.Drawing.Point(3, 171);
 			this.groupControl4.Name = "groupControl4";
@@ -230,9 +235,9 @@
 			// 
 			// groupControl5
 			// 
-			this.groupControl5.Controls.Add(this.label17);
+			this.groupControl5.Controls.Add(this.lblStokSayisi);
 			this.groupControl5.Controls.Add(this.label8);
-			this.groupControl5.Location = new System.Drawing.Point(3, 591);
+			this.groupControl5.Location = new System.Drawing.Point(284, 507);
 			this.groupControl5.Name = "groupControl5";
 			this.groupControl5.ShowCaption = false;
 			this.groupControl5.Size = new System.Drawing.Size(275, 78);
@@ -241,7 +246,7 @@
 			// 
 			// groupControl6
 			// 
-			this.groupControl6.Controls.Add(this.label15);
+			this.groupControl6.Controls.Add(this.lblSehirSayisi);
 			this.groupControl6.Controls.Add(this.label6);
 			this.groupControl6.Location = new System.Drawing.Point(3, 423);
 			this.groupControl6.Name = "groupControl6";
@@ -252,7 +257,7 @@
 			// 
 			// groupControl7
 			// 
-			this.groupControl7.Controls.Add(this.label16);
+			this.groupControl7.Controls.Add(this.lblPersonelSayisi);
 			this.groupControl7.Controls.Add(this.label7);
 			this.groupControl7.Location = new System.Drawing.Point(3, 507);
 			this.groupControl7.Name = "groupControl7";
@@ -263,7 +268,7 @@
 			// 
 			// groupControl8
 			// 
-			this.groupControl8.Controls.Add(this.label14);
+			this.groupControl8.Controls.Add(this.lblFirmaSayisi);
 			this.groupControl8.Controls.Add(this.label5);
 			this.groupControl8.Location = new System.Drawing.Point(3, 339);
 			this.groupControl8.Name = "groupControl8";
@@ -274,9 +279,9 @@
 			// 
 			// groupControl9
 			// 
-			this.groupControl9.Controls.Add(this.label18);
+			this.groupControl9.Controls.Add(this.lblAktifKullanici);
 			this.groupControl9.Controls.Add(this.label9);
-			this.groupControl9.Location = new System.Drawing.Point(3, 675);
+			this.groupControl9.Location = new System.Drawing.Point(565, 507);
 			this.groupControl9.Name = "groupControl9";
 			this.groupControl9.ShowCaption = false;
 			this.groupControl9.Size = new System.Drawing.Size(275, 78);
@@ -373,95 +378,95 @@
 			this.label9.TabIndex = 7;
 			this.label9.Text = "Aktif Kullanıcı:";
 			// 
-			// label10
+			// lblToplamTutar
 			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label10.Location = new System.Drawing.Point(125, 28);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(40, 16);
-			this.label10.TabIndex = 1;
-			this.label10.Text = "00 TL";
+			this.lblToplamTutar.AutoSize = true;
+			this.lblToplamTutar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblToplamTutar.Location = new System.Drawing.Point(125, 28);
+			this.lblToplamTutar.Name = "lblToplamTutar";
+			this.lblToplamTutar.Size = new System.Drawing.Size(40, 16);
+			this.lblToplamTutar.TabIndex = 1;
+			this.lblToplamTutar.Text = "00 TL";
 			// 
-			// label11
+			// lblOdemeler
 			// 
-			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label11.Location = new System.Drawing.Point(125, 32);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(40, 16);
-			this.label11.TabIndex = 2;
-			this.label11.Text = "00 TL";
+			this.lblOdemeler.AutoSize = true;
+			this.lblOdemeler.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblOdemeler.Location = new System.Drawing.Point(125, 32);
+			this.lblOdemeler.Name = "lblOdemeler";
+			this.lblOdemeler.Size = new System.Drawing.Size(40, 16);
+			this.lblOdemeler.TabIndex = 2;
+			this.lblOdemeler.Text = "00 TL";
 			// 
-			// label12
+			// lblPersonelMaaslari
 			// 
-			this.label12.AutoSize = true;
-			this.label12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label12.Location = new System.Drawing.Point(157, 30);
-			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(40, 16);
-			this.label12.TabIndex = 3;
-			this.label12.Text = "00 TL";
+			this.lblPersonelMaaslari.AutoSize = true;
+			this.lblPersonelMaaslari.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblPersonelMaaslari.Location = new System.Drawing.Point(157, 30);
+			this.lblPersonelMaaslari.Name = "lblPersonelMaaslari";
+			this.lblPersonelMaaslari.Size = new System.Drawing.Size(40, 16);
+			this.lblPersonelMaaslari.TabIndex = 3;
+			this.lblPersonelMaaslari.Text = "00 TL";
 			// 
-			// label13
+			// lblMusteriSayisi
 			// 
-			this.label13.AutoSize = true;
-			this.label13.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label13.Location = new System.Drawing.Point(136, 28);
-			this.label13.Name = "label13";
-			this.label13.Size = new System.Drawing.Size(15, 16);
-			this.label13.TabIndex = 4;
-			this.label13.Text = "0";
+			this.lblMusteriSayisi.AutoSize = true;
+			this.lblMusteriSayisi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblMusteriSayisi.Location = new System.Drawing.Point(136, 28);
+			this.lblMusteriSayisi.Name = "lblMusteriSayisi";
+			this.lblMusteriSayisi.Size = new System.Drawing.Size(15, 16);
+			this.lblMusteriSayisi.TabIndex = 4;
+			this.lblMusteriSayisi.Text = "0";
 			// 
-			// label14
+			// lblFirmaSayisi
 			// 
-			this.label14.AutoSize = true;
-			this.label14.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label14.Location = new System.Drawing.Point(136, 30);
-			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(15, 16);
-			this.label14.TabIndex = 5;
-			this.label14.Text = "0";
+			this.lblFirmaSayisi.AutoSize = true;
+			this.lblFirmaSayisi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblFirmaSayisi.Location = new System.Drawing.Point(136, 30);
+			this.lblFirmaSayisi.Name = "lblFirmaSayisi";
+			this.lblFirmaSayisi.Size = new System.Drawing.Size(15, 16);
+			this.lblFirmaSayisi.TabIndex = 5;
+			this.lblFirmaSayisi.Text = "0";
 			// 
-			// label15
+			// lblSehirSayisi
 			// 
-			this.label15.AutoSize = true;
-			this.label15.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label15.Location = new System.Drawing.Point(136, 32);
-			this.label15.Name = "label15";
-			this.label15.Size = new System.Drawing.Size(15, 16);
-			this.label15.TabIndex = 6;
-			this.label15.Text = "0";
+			this.lblSehirSayisi.AutoSize = true;
+			this.lblSehirSayisi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblSehirSayisi.Location = new System.Drawing.Point(136, 32);
+			this.lblSehirSayisi.Name = "lblSehirSayisi";
+			this.lblSehirSayisi.Size = new System.Drawing.Size(15, 16);
+			this.lblSehirSayisi.TabIndex = 6;
+			this.lblSehirSayisi.Text = "0";
 			// 
-			// label16
+			// lblPersonelSayisi
 			// 
-			this.label16.AutoSize = true;
-			this.label16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label16.Location = new System.Drawing.Point(150, 32);
-			this.label16.Name = "label16";
-			this.label16.Size = new System.Drawing.Size(15, 16);
-			this.label16.TabIndex = 7;
-			this.label16.Text = "0";
+			this.lblPersonelSayisi.AutoSize = true;
+			this.lblPersonelSayisi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblPersonelSayisi.Location = new System.Drawing.Point(150, 32);
+			this.lblPersonelSayisi.Name = "lblPersonelSayisi";
+			this.lblPersonelSayisi.Size = new System.Drawing.Size(15, 16);
+			this.lblPersonelSayisi.TabIndex = 7;
+			this.lblPersonelSayisi.Text = "0";
 			// 
-			// label17
+			// lblStokSayisi
 			// 
-			this.label17.AutoSize = true;
-			this.label17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label17.Location = new System.Drawing.Point(125, 30);
-			this.label17.Name = "label17";
-			this.label17.Size = new System.Drawing.Size(15, 16);
-			this.label17.TabIndex = 8;
-			this.label17.Text = "0";
+			this.lblStokSayisi.AutoSize = true;
+			this.lblStokSayisi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblStokSayisi.Location = new System.Drawing.Point(125, 30);
+			this.lblStokSayisi.Name = "lblStokSayisi";
+			this.lblStokSayisi.Size = new System.Drawing.Size(15, 16);
+			this.lblStokSayisi.TabIndex = 8;
+			this.lblStokSayisi.Text = "0";
 			// 
-			// label18
+			// lblAktifKullanici
 			// 
-			this.label18.AutoSize = true;
-			this.label18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.label18.Location = new System.Drawing.Point(125, 34);
-			this.label18.Name = "label18";
-			this.label18.Size = new System.Drawing.Size(36, 16);
-			this.label18.TabIndex = 8;
-			this.label18.Text = "NULL";
+			this.lblAktifKullanici.AutoSize = true;
+			this.lblAktifKullanici.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.lblAktifKullanici.Location = new System.Drawing.Point(125, 34);
+			this.lblAktifKullanici.Name = "lblAktifKullanici";
+			this.lblAktifKullanici.Size = new System.Drawing.Size(36, 16);
+			this.lblAktifKullanici.TabIndex = 8;
+			this.lblAktifKullanici.Text = "NULL";
 			// 
 			// chartControl1
 			// 
@@ -490,6 +495,30 @@
 			this.chartControl2.Size = new System.Drawing.Size(393, 391);
 			this.chartControl2.TabIndex = 8;
 			// 
+			// gridControl3
+			// 
+			this.gridControl3.Location = new System.Drawing.Point(284, 236);
+			this.gridControl3.MainView = this.gridView3;
+			this.gridControl3.Name = "gridControl3";
+			this.gridControl3.Size = new System.Drawing.Size(683, 265);
+			this.gridControl3.TabIndex = 15;
+			this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+			// 
+			// gridView3
+			// 
+			this.gridView3.Appearance.Row.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			this.gridView3.Appearance.Row.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.gridView3.Appearance.Row.BorderColor = System.Drawing.Color.White;
+			this.gridView3.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+			this.gridView3.Appearance.Row.Options.UseBackColor = true;
+			this.gridView3.Appearance.Row.Options.UseBorderColor = true;
+			this.gridView3.Appearance.Row.Options.UseFont = true;
+			this.gridView3.Appearance.Row.Options.UseForeColor = true;
+			this.gridView3.GridControl = this.gridControl3;
+			this.gridView3.Name = "gridView3";
+			this.gridView3.OptionsView.ShowGroupPanel = false;
+			// 
 			// FrmKasa
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,6 +527,7 @@
 			this.Controls.Add(this.Musteriler);
 			this.Name = "FrmKasa";
 			this.Text = "FrmKasa";
+			this.Load += new System.EventHandler(this.FrmKasa_Load);
 			this.Müşteriler.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -540,6 +570,8 @@
 			((System.ComponentModel.ISupportInitialize)(doughnutSeriesView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -554,33 +586,35 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
 		private DevExpress.XtraTab.XtraTabControl Musteriler;
 		private DevExpress.XtraEditors.GroupControl groupControl9;
-		private System.Windows.Forms.Label label18;
+		private System.Windows.Forms.Label lblAktifKullanici;
 		private System.Windows.Forms.Label label9;
 		private DevExpress.XtraEditors.GroupControl groupControl5;
-		private System.Windows.Forms.Label label17;
+		private System.Windows.Forms.Label lblStokSayisi;
 		private System.Windows.Forms.Label label8;
 		private DevExpress.XtraEditors.GroupControl groupControl3;
-		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label lblMusteriSayisi;
 		private System.Windows.Forms.Label label4;
 		private DevExpress.XtraEditors.GroupControl groupControl6;
-		private System.Windows.Forms.Label label15;
+		private System.Windows.Forms.Label lblSehirSayisi;
 		private System.Windows.Forms.Label label6;
 		private DevExpress.XtraEditors.GroupControl groupControl2;
-		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label lblOdemeler;
 		private System.Windows.Forms.Label label2;
 		private DevExpress.XtraEditors.GroupControl groupControl7;
-		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.Label lblPersonelSayisi;
 		private System.Windows.Forms.Label label7;
 		private DevExpress.XtraEditors.GroupControl groupControl4;
-		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label lblPersonelMaaslari;
 		private System.Windows.Forms.Label label3;
 		private DevExpress.XtraEditors.GroupControl groupControl8;
-		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label lblFirmaSayisi;
 		private System.Windows.Forms.Label label5;
 		private DevExpress.XtraEditors.GroupControl groupControl1;
-		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label lblToplamTutar;
 		private System.Windows.Forms.Label label1;
 		private DevExpress.XtraCharts.ChartControl chartControl2;
 		private DevExpress.XtraCharts.ChartControl chartControl1;
+		private DevExpress.XtraGrid.GridControl gridControl3;
+		private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
 	}
 }
