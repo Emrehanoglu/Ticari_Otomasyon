@@ -124,7 +124,7 @@
 			this.Müşteriler.Controls.Add(this.gridControl1);
 			this.Müşteriler.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Müşteriler.ImageOptions.Image")));
 			this.Müşteriler.Name = "Müşteriler";
-			this.Müşteriler.Size = new System.Drawing.Size(967, 760);
+			this.Müşteriler.Size = new System.Drawing.Size(967, 589);
 			this.Müşteriler.Text = "Kasa Giriş Hareketleri";
 			// 
 			// gridControl1
@@ -158,7 +158,7 @@
 			this.xtraTabPage2.Controls.Add(this.gridControl2);
 			this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
 			this.xtraTabPage2.Name = "xtraTabPage2";
-			this.xtraTabPage2.Size = new System.Drawing.Size(967, 760);
+			this.xtraTabPage2.Size = new System.Drawing.Size(967, 589);
 			this.xtraTabPage2.Text = "Kasa Çıkış Hareketleri";
 			// 
 			// gridControl2
@@ -166,7 +166,7 @@
 			this.gridControl2.Location = new System.Drawing.Point(402, 3);
 			this.gridControl2.MainView = this.gridView2;
 			this.gridControl2.Name = "gridControl2";
-			this.gridControl2.Size = new System.Drawing.Size(562, 754);
+			this.gridControl2.Size = new System.Drawing.Size(562, 579);
 			this.gridControl2.TabIndex = 6;
 			this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -183,7 +183,7 @@
 			this.Musteriler.Location = new System.Drawing.Point(0, 0);
 			this.Musteriler.Name = "Musteriler";
 			this.Musteriler.SelectedTabPage = this.Müşteriler;
-			this.Musteriler.Size = new System.Drawing.Size(973, 791);
+			this.Musteriler.Size = new System.Drawing.Size(973, 620);
 			this.Musteriler.TabIndex = 1;
 			this.Musteriler.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.Müşteriler,
@@ -480,19 +480,19 @@
 			series2.View = lineSeriesView1;
 			this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-			this.chartControl1.Size = new System.Drawing.Size(393, 353);
+			this.chartControl1.Size = new System.Drawing.Size(393, 271);
 			this.chartControl1.TabIndex = 7;
 			// 
 			// chartControl2
 			// 
 			this.chartControl2.Legend.Name = "Default Legend";
-			this.chartControl2.Location = new System.Drawing.Point(3, 362);
+			this.chartControl2.Location = new System.Drawing.Point(3, 280);
 			this.chartControl2.Name = "chartControl2";
 			series1.Name = "Series 1";
 			series1.View = doughnutSeriesView1;
 			this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-			this.chartControl2.Size = new System.Drawing.Size(393, 391);
+			this.chartControl2.Size = new System.Drawing.Size(393, 302);
 			this.chartControl2.TabIndex = 8;
 			// 
 			// gridControl3
@@ -523,7 +523,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(973, 791);
+			this.ClientSize = new System.Drawing.Size(973, 620);
 			this.Controls.Add(this.Musteriler);
 			this.Name = "FrmKasa";
 			this.Text = "FrmKasa";

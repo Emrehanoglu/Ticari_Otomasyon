@@ -36,6 +36,23 @@ namespace Ticari_Otomasyon
 		{
 			MusteriHareket();
 			FirmaHareket();
+
+			SqlCommand komut1 = new SqlCommand("Select Sum(Tutar) from Tbl_FaturaDetay",baglan.baglanti());
+			SqlDataReader dr1 = komut1.ExecuteReader();
+			while (dr1.Read())
+			{
+				lblToplamTutar.Text = dr1[0].ToString();
+			}
+			baglan.baglanti().Close();
+
+			SqlCommand komut2 = new SqlCommand("select top 1(Elektrik + Su + Doğalgaz) from Tbl_Giderler order by Id desc", baglan.baglanti());
+			SqlDataReader dr2 = komut2.ExecuteReader();
+			while (dr2.Read())
+			{
+				lblOdemeler.Text = dr2[0].ToString();
+			}
+			baglan.baglanti().Close();
+			
 		}
 	}
 }
