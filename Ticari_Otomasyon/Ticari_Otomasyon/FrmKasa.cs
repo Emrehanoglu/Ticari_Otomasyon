@@ -103,25 +103,76 @@ namespace Ticari_Otomasyon
 				lblStokSayisi.Text = dr8[0].ToString();
 			}
 			baglan.baglanti().Close();
+		}
+		int sayac = 0;
 
-			//1. chart control
-			SqlCommand komut9 = new SqlCommand("select top 4 Ay,Elektrik from Tbl_Giderler order by Id desc", baglan.baglanti());
-			SqlDataReader dr9 = komut9.ExecuteReader();
-			while (dr9.Read())
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			sayac++;
+			if (sayac > 0 && sayac <= 5)
 			{
-				chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr9[0], dr9[1]));
+				groupControl10.Text = "Elektrik";
+				chartControl1.Series["Aylar"].Points.Clear();
+				SqlCommand komut9 = new SqlCommand("select top 4 Ay,Elektrik from Tbl_Giderler order by Id desc", baglan.baglanti());
+				SqlDataReader dr9 = komut9.ExecuteReader();
+				while (dr9.Read())
+				{
+					chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr9[0], dr9[1]));
+				}
+				baglan.baglanti().Close();
 			}
-			baglan.baglanti().Close();
-
-			//2. chart control
-			SqlCommand komut10 = new SqlCommand("select top 4 Ay,Su from Tbl_Giderler order by Id desc", baglan.baglanti());
-			SqlDataReader dr10 = komut10.ExecuteReader();
-			while (dr10.Read())
+			if (sayac > 5 && sayac <= 10)
 			{
-				chartControl2.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr10[0], dr10[1]));
+				groupControl10.Text = "Su";
+				chartControl1.Series["Aylar"].Points.Clear();
+				SqlCommand komut10 = new SqlCommand("select top 4 Ay,Su from Tbl_Giderler order by Id desc", baglan.baglanti());
+				SqlDataReader dr10 = komut10.ExecuteReader();
+				while (dr10.Read())
+				{
+					chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr10[0], dr10[1]));
+				}
+				baglan.baglanti().Close();
 			}
-			baglan.baglanti().Close();
-
+			if (sayac > 10 && sayac <= 15)
+			{
+				groupControl10.Text = "Doğalgaz";
+				chartControl1.Series["Aylar"].Points.Clear();
+				SqlCommand komut10 = new SqlCommand("select top 4 Ay,Doğalgaz from Tbl_Giderler order by Id desc", baglan.baglanti());
+				SqlDataReader dr10 = komut10.ExecuteReader();
+				while (dr10.Read())
+				{
+					chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr10[0], dr10[1]));
+				}
+				baglan.baglanti().Close();
+			}
+			if (sayac > 15 && sayac <= 20)
+			{
+				groupControl10.Text = "Internet";
+				chartControl1.Series["Aylar"].Points.Clear();
+				SqlCommand komut10 = new SqlCommand("select top 4 Ay,Internet from Tbl_Giderler order by Id desc", baglan.baglanti());
+				SqlDataReader dr10 = komut10.ExecuteReader();
+				while (dr10.Read())
+				{
+					chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr10[0], dr10[1]));
+				}
+				baglan.baglanti().Close();
+			}
+			if (sayac > 20 && sayac <= 25)
+			{
+				groupControl10.Text = "Ekstra";
+				chartControl1.Series["Aylar"].Points.Clear();
+				SqlCommand komut10 = new SqlCommand("select top 4 Ay,Ekstra from Tbl_Giderler order by Id desc", baglan.baglanti());
+				SqlDataReader dr10 = komut10.ExecuteReader();
+				while (dr10.Read())
+				{
+					chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr10[0], dr10[1]));
+				}
+				baglan.baglanti().Close();
+			}
+			if(sayac > 25)
+			{
+				sayac = 0;
+			}
 		}
 	}
 }

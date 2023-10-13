@@ -28,13 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKasa));
-			DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-			DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
-			DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
-			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+			DevExpress.XtraCharts.XYDiagram xyDiagram7 = new DevExpress.XtraCharts.XYDiagram();
+			DevExpress.XtraCharts.Series series7 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView7 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+			DevExpress.XtraCharts.XYDiagram xyDiagram8 = new DevExpress.XtraCharts.XYDiagram();
+			DevExpress.XtraCharts.Series series8 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView8 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
 			this.Müşteriler = new DevExpress.XtraTab.XtraTabPage();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -73,6 +74,10 @@
 			this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
 			this.gridControl3 = new DevExpress.XtraGrid.GridControl();
 			this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+			this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
+			this.groupControl11 = new DevExpress.XtraEditors.GroupControl();
+			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.timer2 = new System.Windows.Forms.Timer(this.components);
 			this.Müşteriler.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -100,15 +105,19 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl9)).BeginInit();
 			this.groupControl9.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series7)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series8)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView8)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl10)).BeginInit();
+			this.groupControl10.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl11)).BeginInit();
+			this.groupControl11.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Müşteriler
@@ -155,8 +164,8 @@
 			// 
 			// xtraTabPage2
 			// 
-			this.xtraTabPage2.Controls.Add(this.chartControl2);
-			this.xtraTabPage2.Controls.Add(this.chartControl1);
+			this.xtraTabPage2.Controls.Add(this.groupControl11);
+			this.xtraTabPage2.Controls.Add(this.groupControl10);
 			this.xtraTabPage2.Controls.Add(this.gridControl2);
 			this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
 			this.xtraTabPage2.Name = "xtraTabPage2";
@@ -472,35 +481,35 @@
 			// 
 			// chartControl1
 			// 
-			xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-			xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-			this.chartControl1.Diagram = xyDiagram2;
+			xyDiagram7.AxisX.VisibleInPanesSerializable = "-1";
+			xyDiagram7.AxisY.VisibleInPanesSerializable = "-1";
+			this.chartControl1.Diagram = xyDiagram7;
 			this.chartControl1.Legend.Name = "Default Legend";
-			this.chartControl1.Location = new System.Drawing.Point(3, 3);
+			this.chartControl1.Location = new System.Drawing.Point(8, 23);
 			this.chartControl1.Name = "chartControl1";
-			series2.Name = "Aylar";
-			sideBySideBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			series2.View = sideBySideBarSeriesView2;
+			series7.Name = "Aylar";
+			sideBySideBarSeriesView7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			series7.View = sideBySideBarSeriesView7;
 			this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
-			this.chartControl1.Size = new System.Drawing.Size(393, 271);
+        series7};
+			this.chartControl1.Size = new System.Drawing.Size(380, 247);
 			this.chartControl1.TabIndex = 7;
 			// 
 			// chartControl2
 			// 
-			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-			this.chartControl2.Diagram = xyDiagram1;
+			xyDiagram8.AxisX.VisibleInPanesSerializable = "-1";
+			xyDiagram8.AxisY.VisibleInPanesSerializable = "-1";
+			this.chartControl2.Diagram = xyDiagram8;
 			this.chartControl2.Legend.Name = "Default Legend";
-			this.chartControl2.Location = new System.Drawing.Point(3, 280);
+			this.chartControl2.Location = new System.Drawing.Point(8, 23);
 			this.chartControl2.Name = "chartControl2";
-			series1.Name = "Aylar";
-			sideBySideBarSeriesView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-			sideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(208)))), ((int)(((byte)(80)))));
-			series1.View = sideBySideBarSeriesView1;
+			series8.Name = "Aylar";
+			sideBySideBarSeriesView8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+			sideBySideBarSeriesView8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(208)))), ((int)(((byte)(80)))));
+			series8.View = sideBySideBarSeriesView8;
 			this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-			this.chartControl2.Size = new System.Drawing.Size(393, 302);
+        series8};
+			this.chartControl2.Size = new System.Drawing.Size(380, 270);
 			this.chartControl2.TabIndex = 8;
 			// 
 			// gridControl3
@@ -526,6 +535,34 @@
 			this.gridView3.GridControl = this.gridControl3;
 			this.gridView3.Name = "gridView3";
 			this.gridView3.OptionsView.ShowGroupPanel = false;
+			// 
+			// groupControl10
+			// 
+			this.groupControl10.Controls.Add(this.chartControl1);
+			this.groupControl10.Location = new System.Drawing.Point(3, 3);
+			this.groupControl10.Name = "groupControl10";
+			this.groupControl10.Size = new System.Drawing.Size(393, 275);
+			this.groupControl10.TabIndex = 10;
+			this.groupControl10.Text = "groupControl10";
+			// 
+			// groupControl11
+			// 
+			this.groupControl11.Controls.Add(this.chartControl2);
+			this.groupControl11.Location = new System.Drawing.Point(3, 284);
+			this.groupControl11.Name = "groupControl11";
+			this.groupControl11.Size = new System.Drawing.Size(393, 298);
+			this.groupControl11.TabIndex = 11;
+			this.groupControl11.Text = "groupControl11";
+			// 
+			// timer1
+			// 
+			this.timer1.Enabled = true;
+			this.timer1.Interval = 500;
+			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+			// 
+			// timer2
+			// 
+			this.timer2.Enabled = true;
 			// 
 			// FrmKasa
 			// 
@@ -571,16 +608,20 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl9)).EndInit();
 			this.groupControl9.ResumeLayout(false);
 			this.groupControl9.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView7)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(xyDiagram8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView8)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series8)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.groupControl10)).EndInit();
+			this.groupControl10.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.groupControl11)).EndInit();
+			this.groupControl11.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -625,5 +666,9 @@
 		private DevExpress.XtraCharts.ChartControl chartControl1;
 		private DevExpress.XtraGrid.GridControl gridControl3;
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+		private DevExpress.XtraEditors.GroupControl groupControl11;
+		private DevExpress.XtraEditors.GroupControl groupControl10;
+		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Timer timer2;
 	}
 }
