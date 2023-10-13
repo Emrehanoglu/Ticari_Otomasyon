@@ -27,6 +27,7 @@ namespace Ticari_Otomasyon
 			if (dr.Read())
 			{
 				Form1 fr = new Form1();
+				fr.kullanici = txtKullaniciAdi.Text;
 				fr.Show();
 				this.Hide();
 			}
@@ -34,6 +35,11 @@ namespace Ticari_Otomasyon
 			{
 				MessageBox.Show("Kullanıcı Adı veya Şifre Hatalı, Tekrar Deneyiniz", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 			}
+		}
+
+		private void FrmAdmin_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

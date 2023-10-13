@@ -32,8 +32,10 @@ namespace Ticari_Otomasyon
 			komut.Fill(dt);
 			gridControl3.DataSource = dt;
 		}
+		public string ad;
 		private void FrmKasa_Load(object sender, EventArgs e)
 		{
+			lblAktifKullanici.Text = ad;
 			MusteriHareket();
 			FirmaHareket();
 

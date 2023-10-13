@@ -36,10 +36,10 @@ namespace Ticari_Otomasyon
 				frMusteriler.Show();
 			}
 		}
-
+		public string kullanici;
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		FrmFirmalar frmFirmalar;
@@ -147,6 +147,7 @@ namespace Ticari_Otomasyon
 			if(frmKasa == null || frmKasa.IsDisposed)
 			{
 				frmKasa = new FrmKasa();
+				frmKasa.ad = kullanici;
 				frmKasa.MdiParent = this;
 				frmKasa.Show();
 			}
