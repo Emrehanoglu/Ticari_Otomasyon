@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.Charts;
 
 namespace Ticari_Otomasyon
 {
@@ -100,6 +101,24 @@ namespace Ticari_Otomasyon
 			while (dr8.Read())
 			{
 				lblStokSayisi.Text = dr8[0].ToString();
+			}
+			baglan.baglanti().Close();
+
+			//1. chart control
+			SqlCommand komut9 = new SqlCommand("select top 4 Ay,Elektrik from Tbl_Giderler order by Id desc", baglan.baglanti());
+			SqlDataReader dr9 = komut9.ExecuteReader();
+			while (dr9.Read())
+			{
+				chartControl1.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr9[0], dr9[1]));
+			}
+			baglan.baglanti().Close();
+
+			//2. chart control
+			SqlCommand komut10 = new SqlCommand("select top 4 Ay,Su from Tbl_Giderler order by Id desc", baglan.baglanti());
+			SqlDataReader dr10 = komut10.ExecuteReader();
+			while (dr10.Read())
+			{
+				chartControl2.Series["Aylar"].Points.Add(new DevExpress.XtraCharts.SeriesPoint(dr10[0], dr10[1]));
 			}
 			baglan.baglanti().Close();
 
