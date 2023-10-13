@@ -77,6 +77,30 @@ namespace Ticari_Otomasyon
 			}
 			baglan.baglanti().Close();
 
+			SqlCommand komut6 = new SqlCommand("select count(distinct(Il)) from Tbl_Firmalar", baglan.baglanti());
+			SqlDataReader dr6 = komut6.ExecuteReader();
+			while (dr6.Read())
+			{
+				lblSehirSayisi.Text = dr6[0].ToString();
+			}
+			baglan.baglanti().Close();
+
+			SqlCommand komut7 = new SqlCommand("select count(*) from Tbl_Personeller", baglan.baglanti());
+			SqlDataReader dr7 = komut7.ExecuteReader();
+			while (dr7.Read())
+			{
+				lblPersonelMaaslari.Text = dr7[0].ToString();
+			}
+			baglan.baglanti().Close();
+
+			SqlCommand komut8 = new SqlCommand("select sum(adet) from Tbl_Urunler", baglan.baglanti());
+			SqlDataReader dr8 = komut8.ExecuteReader();
+			while (dr8.Read())
+			{
+				lblStokSayisi.Text = dr8[0].ToString();
+			}
+			baglan.baglanti().Close();
+
 		}
 	}
 }
