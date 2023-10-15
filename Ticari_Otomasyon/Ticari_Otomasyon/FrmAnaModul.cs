@@ -39,7 +39,12 @@ namespace Ticari_Otomasyon
 		public string kullanici;
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			
+			if (frmAnaSayfa == null || frmAnaSayfa.IsDisposed)
+			{
+				frmAnaSayfa = new FrmAnaSayfa();
+				frmAnaSayfa.MdiParent = this;
+				frmAnaSayfa.Show();
+			}
 		}
 
 		FrmFirmalar frmFirmalar;
@@ -150,6 +155,16 @@ namespace Ticari_Otomasyon
 				frmKasa.ad = kullanici;
 				frmKasa.MdiParent = this;
 				frmKasa.Show();
+			}
+		}
+		FrmAnaSayfa frmAnaSayfa;
+		private void btnAnaSayfa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+		{
+			if (frmAnaSayfa == null || frmAnaSayfa.IsDisposed)
+			{
+				frmAnaSayfa = new FrmAnaSayfa();
+				frmAnaSayfa.MdiParent = this;
+				frmAnaSayfa.Show();
 			}
 		}
 	}

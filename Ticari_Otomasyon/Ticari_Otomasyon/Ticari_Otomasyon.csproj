@@ -74,6 +74,12 @@
     <Compile Include="FrmAnaModul.Designer.cs">
       <DependentUpon>FrmAnaModul.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnaSayfa.Designer.cs">
+      <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAyarlar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAnaModul.resx">
       <DependentUpon>FrmAnaModul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnaSayfa.resx">
+      <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAyarlar.resx">
       <DependentUpon>FrmAyarlar.cs</DependentUpon>
