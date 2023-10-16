@@ -43,7 +43,6 @@
 			this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
 			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
 			this.groupControl1.SuspendLayout();
@@ -170,8 +169,7 @@
 			this.xtraTabControl1.Size = new System.Drawing.Size(307, 615);
 			this.xtraTabControl1.TabIndex = 4;
 			this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
+            this.xtraTabPage1});
 			// 
 			// xtraTabPage1
 			// 
@@ -180,13 +178,6 @@
 			this.xtraTabPage1.Name = "xtraTabPage1";
 			this.xtraTabPage1.Size = new System.Drawing.Size(301, 584);
 			this.xtraTabPage1.Text = "Döviz Kurları";
-			// 
-			// xtraTabPage2
-			// 
-			this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
-			this.xtraTabPage2.Name = "xtraTabPage2";
-			this.xtraTabPage2.Size = new System.Drawing.Size(301, 584);
-			this.xtraTabPage2.Text = "Haberler";
 			// 
 			// webBrowser1
 			// 
@@ -249,7 +240,6 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
 		private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
 		private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-		private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
 		private System.Windows.Forms.WebBrowser webBrowser1;
 	}
 }
