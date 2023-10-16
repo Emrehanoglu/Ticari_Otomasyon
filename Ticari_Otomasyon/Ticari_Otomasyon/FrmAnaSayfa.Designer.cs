@@ -119,7 +119,7 @@
 			this.groupControl3.Name = "groupControl3";
 			this.groupControl3.Size = new System.Drawing.Size(328, 307);
 			this.groupControl3.TabIndex = 3;
-			this.groupControl3.Text = "En Çok İş Yapılan 10 Firma";
+			this.groupControl3.Text = "Fihrist";
 			// 
 			// gridControl3
 			// 
@@ -182,7 +182,7 @@
 			// 
 			this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
 			this.xtraTabPage2.Name = "xtraTabPage2";
-			this.xtraTabPage2.Size = new System.Drawing.Size(294, 272);
+			this.xtraTabPage2.Size = new System.Drawing.Size(301, 584);
 			this.xtraTabPage2.Text = "Haberler";
 			// 
 			// FrmAnaSayfa

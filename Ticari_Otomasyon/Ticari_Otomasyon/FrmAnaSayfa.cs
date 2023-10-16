@@ -41,11 +41,19 @@ namespace Ticari_Otomasyon
 			gridControl4.DataSource = dt;
 			
 		}
+		void Fihrist()
+		{
+			SqlDataAdapter komut = new SqlDataAdapter("select Ad,Telefon1 from Tbl_Firmalar", baglan.baglanti());
+			DataTable dt = new DataTable();
+			komut.Fill(dt);
+			gridControl3.DataSource = dt;
+		}
 		private void FrmAnaSayfa_Load(object sender, EventArgs e)
 		{
 			azalanStoklar();
 			Ajanda();
 			sonOnHareket();
+			Fihrist();
 		}
 	}
 }
