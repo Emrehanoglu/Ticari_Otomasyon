@@ -44,6 +44,7 @@
 			this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
 			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
 			this.groupControl1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -62,6 +63,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
 			this.xtraTabControl1.SuspendLayout();
+			this.xtraTabPage1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// groupControl1
@@ -173,6 +175,7 @@
 			// 
 			// xtraTabPage1
 			// 
+			this.xtraTabPage1.Controls.Add(this.webBrowser1);
 			this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
 			this.xtraTabPage1.Name = "xtraTabPage1";
 			this.xtraTabPage1.Size = new System.Drawing.Size(301, 584);
@@ -184,6 +187,15 @@
 			this.xtraTabPage2.Name = "xtraTabPage2";
 			this.xtraTabPage2.Size = new System.Drawing.Size(301, 584);
 			this.xtraTabPage2.Text = "Haberler";
+			// 
+			// webBrowser1
+			// 
+			this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+			this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+			this.webBrowser1.Name = "webBrowser1";
+			this.webBrowser1.Size = new System.Drawing.Size(301, 584);
+			this.webBrowser1.TabIndex = 0;
 			// 
 			// FrmAnaSayfa
 			// 
@@ -216,6 +228,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
 			this.xtraTabControl1.ResumeLayout(false);
+			this.xtraTabPage1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -237,5 +250,6 @@
 		private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
 		private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
 		private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+		private System.Windows.Forms.WebBrowser webBrowser1;
 	}
 }

@@ -54,6 +54,8 @@ namespace Ticari_Otomasyon
 			Ajanda();
 			sonOnHareket();
 			Fihrist();
+
+			webBrowser1.Navigate("https://www.tcmb.gov.tr/kurlar/today.xml");
 		}
 	}
 }
