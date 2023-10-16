@@ -33,11 +33,19 @@ namespace Ticari_Otomasyon
 			komut.Fill(dt);
 			gridControl2.DataSource = dt;
 		}
-
+		void sonOnHareket()
+		{
+			SqlDataAdapter komut = new SqlDataAdapter("exec SonOnHareket", baglan.baglanti());
+			DataTable dt = new DataTable();
+			komut.Fill(dt);
+			gridControl4.DataSource = dt;
+			
+		}
 		private void FrmAnaSayfa_Load(object sender, EventArgs e)
 		{
 			azalanStoklar();
 			Ajanda();
+			sonOnHareket();
 		}
 	}
 }
