@@ -29,18 +29,18 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStoklar));
-			DevExpress.XtraCharts.SimpleDiagram3D simpleDiagram3D5 = new DevExpress.XtraCharts.SimpleDiagram3D();
-			DevExpress.XtraCharts.Series series5 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.Pie3DSeriesView pie3DSeriesView3 = new DevExpress.XtraCharts.Pie3DSeriesView();
-			DevExpress.XtraCharts.SimpleDiagram3D simpleDiagram3D6 = new DevExpress.XtraCharts.SimpleDiagram3D();
-			DevExpress.XtraCharts.Series series6 = new DevExpress.XtraCharts.Series();
-			DevExpress.XtraCharts.Doughnut3DSeriesView doughnut3DSeriesView3 = new DevExpress.XtraCharts.Doughnut3DSeriesView();
+			DevExpress.XtraCharts.SimpleDiagram3D simpleDiagram3D1 = new DevExpress.XtraCharts.SimpleDiagram3D();
+			DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.Pie3DSeriesView pie3DSeriesView1 = new DevExpress.XtraCharts.Pie3DSeriesView();
+			DevExpress.XtraCharts.SimpleDiagram3D simpleDiagram3D2 = new DevExpress.XtraCharts.SimpleDiagram3D();
+			DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+			DevExpress.XtraCharts.Doughnut3DSeriesView doughnut3DSeriesView1 = new DevExpress.XtraCharts.Doughnut3DSeriesView();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
 			this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
 			this.chartControl2 = new DevExpress.XtraCharts.ChartControl();
 			this.gridControl2 = new DevExpress.XtraGrid.GridControl();
 			this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -49,15 +49,15 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
 			this.xtraTabControl1.SuspendLayout();
 			this.xtraTabPage1.SuspendLayout();
-			this.xtraTabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(pie3DSeriesView3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(pie3DSeriesView1)).BeginInit();
+			this.xtraTabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D6)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(series6)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(doughnut3DSeriesView3)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(doughnut3DSeriesView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
 			this.SuspendLayout();
@@ -77,6 +77,7 @@
 			this.gridView1.GridControl = this.gridControl1;
 			this.gridView1.Name = "gridView1";
 			this.gridView1.OptionsView.ShowGroupPanel = false;
+			this.gridView1.DoubleClick += new System.EventHandler(this.gridView1_DoubleClick);
 			// 
 			// xtraTabControl1
 			// 
@@ -97,6 +98,20 @@
 			this.xtraTabPage1.Size = new System.Drawing.Size(579, 744);
 			this.xtraTabPage1.Text = "Ürün-Miktar";
 			// 
+			// chartControl1
+			// 
+			simpleDiagram3D1.RotationMatrixSerializable = "1;0;0;0;0;0.5;-0.866025403784439;0;0;0.866025403784439;0.5;0;0;0;0;1";
+			this.chartControl1.Diagram = simpleDiagram3D1;
+			this.chartControl1.Legend.Name = "Default Legend";
+			this.chartControl1.Location = new System.Drawing.Point(3, 3);
+			this.chartControl1.Name = "chartControl1";
+			series1.Name = "Series 1";
+			series1.View = pie3DSeriesView1;
+			this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+			this.chartControl1.Size = new System.Drawing.Size(576, 757);
+			this.chartControl1.TabIndex = 0;
+			// 
 			// xtraTabPage2
 			// 
 			this.xtraTabPage2.Controls.Add(this.chartControl2);
@@ -105,31 +120,17 @@
 			this.xtraTabPage2.Size = new System.Drawing.Size(579, 744);
 			this.xtraTabPage2.Text = "Firma-Şehir";
 			// 
-			// chartControl1
-			// 
-			simpleDiagram3D5.RotationMatrixSerializable = "1;0;0;0;0;0.5;-0.866025403784439;0;0;0.866025403784439;0.5;0;0;0;0;1";
-			this.chartControl1.Diagram = simpleDiagram3D5;
-			this.chartControl1.Legend.Name = "Default Legend";
-			this.chartControl1.Location = new System.Drawing.Point(3, 3);
-			this.chartControl1.Name = "chartControl1";
-			series5.Name = "Series 1";
-			series5.View = pie3DSeriesView3;
-			this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series5};
-			this.chartControl1.Size = new System.Drawing.Size(576, 757);
-			this.chartControl1.TabIndex = 0;
-			// 
 			// chartControl2
 			// 
-			simpleDiagram3D6.RotationMatrixSerializable = "1;0;0;0;0;0.5;-0.866025403784439;0;0;0.866025403784439;0.5;0;0;0;0;1";
-			this.chartControl2.Diagram = simpleDiagram3D6;
+			simpleDiagram3D2.RotationMatrixSerializable = "1;0;0;0;0;0.5;-0.866025403784439;0;0;0.866025403784439;0.5;0;0;0;0;1";
+			this.chartControl2.Diagram = simpleDiagram3D2;
 			this.chartControl2.Legend.Name = "Default Legend";
 			this.chartControl2.Location = new System.Drawing.Point(3, 3);
 			this.chartControl2.Name = "chartControl2";
-			series6.Name = "Series 1";
-			series6.View = doughnut3DSeriesView3;
+			series2.Name = "Series 1";
+			series2.View = doughnut3DSeriesView1;
 			this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series6};
+        series2};
 			this.chartControl2.Size = new System.Drawing.Size(573, 738);
 			this.chartControl2.TabIndex = 0;
 			// 
@@ -165,14 +166,14 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
 			this.xtraTabControl1.ResumeLayout(false);
 			this.xtraTabPage1.ResumeLayout(false);
-			this.xtraTabPage2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(pie3DSeriesView3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(pie3DSeriesView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D6)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(doughnut3DSeriesView3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(series6)).EndInit();
+			this.xtraTabPage2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(simpleDiagram3D2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(doughnut3DSeriesView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.chartControl2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
