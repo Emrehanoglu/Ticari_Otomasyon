@@ -53,7 +53,7 @@
 			this.txtSiraNo = new DevExpress.XtraEditors.TextEdit();
 			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
 			this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
-			this.txtFaturaId = new DevExpress.XtraEditors.TextEdit();
+			this.txtPersonel = new DevExpress.XtraEditors.TextEdit();
 			this.txtFiyat = new DevExpress.XtraEditors.TextEdit();
 			this.txtTutar = new DevExpress.XtraEditors.TextEdit();
 			this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -72,6 +72,11 @@
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+			this.txtFirma = new DevExpress.XtraEditors.TextEdit();
+			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
+			this.txtFaturaId = new DevExpress.XtraEditors.TextEdit();
+			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
 			this.xtraTabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
 			this.groupControl4.SuspendLayout();
@@ -88,7 +93,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtSiraNo.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
 			this.groupControl5.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtPersonel.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtUrunId.Properties)).BeginInit();
@@ -99,6 +104,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
 			this.xtraTabControl1.SuspendLayout();
 			this.xtraTabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtFirma.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// xtraTabPage1
@@ -297,8 +304,13 @@
 			// 
 			// groupControl5
 			// 
-			this.groupControl5.Controls.Add(this.btnTemizle);
+			this.groupControl5.Controls.Add(this.simpleButton1);
 			this.groupControl5.Controls.Add(this.txtFaturaId);
+			this.groupControl5.Controls.Add(this.labelControl15);
+			this.groupControl5.Controls.Add(this.txtFirma);
+			this.groupControl5.Controls.Add(this.labelControl14);
+			this.groupControl5.Controls.Add(this.btnTemizle);
+			this.groupControl5.Controls.Add(this.txtPersonel);
 			this.groupControl5.Controls.Add(this.txtFiyat);
 			this.groupControl5.Controls.Add(this.txtTutar);
 			this.groupControl5.Controls.Add(this.labelControl9);
@@ -330,12 +342,12 @@
 			this.btnTemizle.Text = "Temizle";
 			this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
 			// 
-			// txtFaturaId
+			// txtPersonel
 			// 
-			this.txtFaturaId.Location = new System.Drawing.Point(85, 183);
-			this.txtFaturaId.Name = "txtFaturaId";
-			this.txtFaturaId.Size = new System.Drawing.Size(100, 20);
-			this.txtFaturaId.TabIndex = 36;
+			this.txtPersonel.Location = new System.Drawing.Point(85, 183);
+			this.txtPersonel.Name = "txtPersonel";
+			this.txtPersonel.Size = new System.Drawing.Size(100, 20);
+			this.txtPersonel.TabIndex = 36;
 			// 
 			// txtFiyat
 			// 
@@ -348,16 +360,17 @@
 			// 
 			this.txtTutar.Location = new System.Drawing.Point(85, 158);
 			this.txtTutar.Name = "txtTutar";
+			this.txtTutar.Properties.ReadOnly = true;
 			this.txtTutar.Size = new System.Drawing.Size(100, 20);
 			this.txtTutar.TabIndex = 34;
 			// 
 			// labelControl9
 			// 
-			this.labelControl9.Location = new System.Drawing.Point(22, 186);
+			this.labelControl9.Location = new System.Drawing.Point(26, 186);
 			this.labelControl9.Name = "labelControl9";
-			this.labelControl9.Size = new System.Drawing.Size(52, 13);
+			this.labelControl9.Size = new System.Drawing.Size(48, 13);
 			this.labelControl9.TabIndex = 33;
-			this.labelControl9.Text = "Fatura Id :";
+			this.labelControl9.Text = "Personel :";
 			// 
 			// labelControl12
 			// 
@@ -379,7 +392,7 @@
 			// 
 			this.txtUrunId.Location = new System.Drawing.Point(85, 57);
 			this.txtUrunId.Name = "txtUrunId";
-			this.txtUrunId.Size = new System.Drawing.Size(100, 20);
+			this.txtUrunId.Size = new System.Drawing.Size(52, 20);
 			this.txtUrunId.TabIndex = 29;
 			// 
 			// txtUrun
@@ -487,6 +500,46 @@
 			this.xtraTabPage2.Size = new System.Drawing.Size(238, 742);
 			this.xtraTabPage2.Text = "Fatura Detayları";
 			// 
+			// txtFirma
+			// 
+			this.txtFirma.Location = new System.Drawing.Point(85, 208);
+			this.txtFirma.Name = "txtFirma";
+			this.txtFirma.Size = new System.Drawing.Size(100, 20);
+			this.txtFirma.TabIndex = 39;
+			// 
+			// labelControl14
+			// 
+			this.labelControl14.Location = new System.Drawing.Point(41, 211);
+			this.labelControl14.Name = "labelControl14";
+			this.labelControl14.Size = new System.Drawing.Size(33, 13);
+			this.labelControl14.TabIndex = 38;
+			this.labelControl14.Text = "Firma :";
+			// 
+			// txtFaturaId
+			// 
+			this.txtFaturaId.Location = new System.Drawing.Point(85, 233);
+			this.txtFaturaId.Name = "txtFaturaId";
+			this.txtFaturaId.Size = new System.Drawing.Size(100, 20);
+			this.txtFaturaId.TabIndex = 41;
+			// 
+			// labelControl15
+			// 
+			this.labelControl15.Location = new System.Drawing.Point(22, 236);
+			this.labelControl15.Name = "labelControl15";
+			this.labelControl15.Size = new System.Drawing.Size(52, 13);
+			this.labelControl15.TabIndex = 40;
+			this.labelControl15.Text = "Fatura Id :";
+			// 
+			// simpleButton1
+			// 
+			this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+			this.simpleButton1.Location = new System.Drawing.Point(143, 56);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(42, 21);
+			this.simpleButton1.TabIndex = 42;
+			this.simpleButton1.Text = "Bul";
+			this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+			// 
 			// FrmFaturalar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -517,7 +570,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
 			this.groupControl5.ResumeLayout(false);
 			this.groupControl5.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtPersonel.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtUrunId.Properties)).EndInit();
@@ -528,6 +581,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
 			this.xtraTabControl1.ResumeLayout(false);
 			this.xtraTabPage2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.txtFirma.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -575,7 +630,12 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 		private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
 		private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
-		private DevExpress.XtraEditors.TextEdit txtFaturaId;
+		private DevExpress.XtraEditors.TextEdit txtPersonel;
 		private DevExpress.XtraEditors.SimpleButton btnTemizle;
+		private DevExpress.XtraEditors.TextEdit txtFirma;
+		private DevExpress.XtraEditors.LabelControl labelControl14;
+		private DevExpress.XtraEditors.TextEdit txtFaturaId;
+		private DevExpress.XtraEditors.LabelControl labelControl15;
+		private DevExpress.XtraEditors.SimpleButton simpleButton1;
 	}
 }
