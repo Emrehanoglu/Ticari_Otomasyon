@@ -52,6 +52,11 @@
 			this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
 			this.txtSiraNo = new DevExpress.XtraEditors.TextEdit();
 			this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+			this.txtFaturaId = new DevExpress.XtraEditors.TextEdit();
+			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+			this.txtFirma = new DevExpress.XtraEditors.TextEdit();
+			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
 			this.btnTemizle = new DevExpress.XtraEditors.SimpleButton();
 			this.txtPersonel = new DevExpress.XtraEditors.TextEdit();
 			this.txtFiyat = new DevExpress.XtraEditors.TextEdit();
@@ -72,11 +77,8 @@
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
 			this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-			this.txtFirma = new DevExpress.XtraEditors.TextEdit();
-			this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-			this.txtFaturaId = new DevExpress.XtraEditors.TextEdit();
-			this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+			this.cmbCariTürü = new DevExpress.XtraEditors.ComboBoxEdit();
+			this.label1 = new System.Windows.Forms.Label();
 			this.xtraTabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
 			this.groupControl4.SuspendLayout();
@@ -93,6 +95,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.txtSiraNo.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
 			this.groupControl5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtFirma.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtPersonel.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).BeginInit();
@@ -104,8 +108,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
 			this.xtraTabControl1.SuspendLayout();
 			this.xtraTabPage2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.txtFirma.Properties)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.cmbCariTürü.Properties)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// xtraTabPage1
@@ -186,10 +189,10 @@
 			this.groupControl3.Controls.Add(this.labelControl10);
 			this.groupControl3.Controls.Add(this.maskTxtTarih);
 			this.groupControl3.Controls.Add(this.labelControl4);
-			this.groupControl3.Location = new System.Drawing.Point(3, 110);
+			this.groupControl3.Location = new System.Drawing.Point(3, 123);
 			this.groupControl3.Name = "groupControl3";
 			this.groupControl3.ShowCaption = false;
-			this.groupControl3.Size = new System.Drawing.Size(232, 131);
+			this.groupControl3.Size = new System.Drawing.Size(232, 118);
 			this.groupControl3.TabIndex = 1;
 			this.groupControl3.Text = "groupControl3";
 			// 
@@ -244,6 +247,8 @@
 			// 
 			// groupControl2
 			// 
+			this.groupControl2.Controls.Add(this.label1);
+			this.groupControl2.Controls.Add(this.cmbCariTürü);
 			this.groupControl2.Controls.Add(this.txtId);
 			this.groupControl2.Controls.Add(this.labelControl1);
 			this.groupControl2.Controls.Add(this.txtSeri);
@@ -253,7 +258,7 @@
 			this.groupControl2.Location = new System.Drawing.Point(3, 3);
 			this.groupControl2.Name = "groupControl2";
 			this.groupControl2.ShowCaption = false;
-			this.groupControl2.Size = new System.Drawing.Size(232, 101);
+			this.groupControl2.Size = new System.Drawing.Size(232, 114);
 			this.groupControl2.TabIndex = 0;
 			this.groupControl2.Text = "groupControl2";
 			// 
@@ -289,7 +294,7 @@
 			// 
 			// labelControl3
 			// 
-			this.labelControl3.Location = new System.Drawing.Point(37, 69);
+			this.labelControl3.Location = new System.Drawing.Point(37, 67);
 			this.labelControl3.Name = "labelControl3";
 			this.labelControl3.Size = new System.Drawing.Size(41, 13);
 			this.labelControl3.TabIndex = 5;
@@ -297,7 +302,7 @@
 			// 
 			// txtSiraNo
 			// 
-			this.txtSiraNo.Location = new System.Drawing.Point(83, 66);
+			this.txtSiraNo.Location = new System.Drawing.Point(83, 64);
 			this.txtSiraNo.Name = "txtSiraNo";
 			this.txtSiraNo.Size = new System.Drawing.Size(100, 20);
 			this.txtSiraNo.TabIndex = 4;
@@ -331,6 +336,46 @@
 			this.groupControl5.Size = new System.Drawing.Size(232, 736);
 			this.groupControl5.TabIndex = 0;
 			this.groupControl5.Text = "groupControl5";
+			// 
+			// simpleButton1
+			// 
+			this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+			this.simpleButton1.Location = new System.Drawing.Point(143, 56);
+			this.simpleButton1.Name = "simpleButton1";
+			this.simpleButton1.Size = new System.Drawing.Size(42, 21);
+			this.simpleButton1.TabIndex = 42;
+			this.simpleButton1.Text = "Bul";
+			this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+			// 
+			// txtFaturaId
+			// 
+			this.txtFaturaId.Location = new System.Drawing.Point(85, 233);
+			this.txtFaturaId.Name = "txtFaturaId";
+			this.txtFaturaId.Size = new System.Drawing.Size(100, 20);
+			this.txtFaturaId.TabIndex = 41;
+			// 
+			// labelControl15
+			// 
+			this.labelControl15.Location = new System.Drawing.Point(22, 236);
+			this.labelControl15.Name = "labelControl15";
+			this.labelControl15.Size = new System.Drawing.Size(52, 13);
+			this.labelControl15.TabIndex = 40;
+			this.labelControl15.Text = "Fatura Id :";
+			// 
+			// txtFirma
+			// 
+			this.txtFirma.Location = new System.Drawing.Point(85, 208);
+			this.txtFirma.Name = "txtFirma";
+			this.txtFirma.Size = new System.Drawing.Size(100, 20);
+			this.txtFirma.TabIndex = 39;
+			// 
+			// labelControl14
+			// 
+			this.labelControl14.Location = new System.Drawing.Point(41, 211);
+			this.labelControl14.Name = "labelControl14";
+			this.labelControl14.Size = new System.Drawing.Size(33, 13);
+			this.labelControl14.TabIndex = 38;
+			this.labelControl14.Text = "Firma :";
 			// 
 			// btnTemizle
 			// 
@@ -500,45 +545,27 @@
 			this.xtraTabPage2.Size = new System.Drawing.Size(238, 742);
 			this.xtraTabPage2.Text = "Fatura Detayları";
 			// 
-			// txtFirma
+			// cmbCariTürü
 			// 
-			this.txtFirma.Location = new System.Drawing.Point(85, 208);
-			this.txtFirma.Name = "txtFirma";
-			this.txtFirma.Size = new System.Drawing.Size(100, 20);
-			this.txtFirma.TabIndex = 39;
+			this.cmbCariTürü.Location = new System.Drawing.Point(84, 89);
+			this.cmbCariTürü.Name = "cmbCariTürü";
+			this.cmbCariTürü.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+			this.cmbCariTürü.Properties.Items.AddRange(new object[] {
+            "Müşteri",
+            "Firma"});
+			this.cmbCariTürü.Properties.ReadOnly = true;
+			this.cmbCariTürü.Size = new System.Drawing.Size(100, 20);
+			this.cmbCariTürü.TabIndex = 6;
 			// 
-			// labelControl14
+			// label1
 			// 
-			this.labelControl14.Location = new System.Drawing.Point(41, 211);
-			this.labelControl14.Name = "labelControl14";
-			this.labelControl14.Size = new System.Drawing.Size(33, 13);
-			this.labelControl14.TabIndex = 38;
-			this.labelControl14.Text = "Firma :";
-			// 
-			// txtFaturaId
-			// 
-			this.txtFaturaId.Location = new System.Drawing.Point(85, 233);
-			this.txtFaturaId.Name = "txtFaturaId";
-			this.txtFaturaId.Size = new System.Drawing.Size(100, 20);
-			this.txtFaturaId.TabIndex = 41;
-			// 
-			// labelControl15
-			// 
-			this.labelControl15.Location = new System.Drawing.Point(22, 236);
-			this.labelControl15.Name = "labelControl15";
-			this.labelControl15.Size = new System.Drawing.Size(52, 13);
-			this.labelControl15.TabIndex = 40;
-			this.labelControl15.Text = "Fatura Id :";
-			// 
-			// simpleButton1
-			// 
-			this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-			this.simpleButton1.Location = new System.Drawing.Point(143, 56);
-			this.simpleButton1.Name = "simpleButton1";
-			this.simpleButton1.Size = new System.Drawing.Size(42, 21);
-			this.simpleButton1.TabIndex = 42;
-			this.simpleButton1.Text = "Bul";
-			this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(20, 92);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(58, 13);
+			this.label1.TabIndex = 7;
+			this.label1.Text = "Cari Türü :";
 			// 
 			// FrmFaturalar
 			// 
@@ -570,6 +597,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
 			this.groupControl5.ResumeLayout(false);
 			this.groupControl5.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.txtFirma.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtPersonel.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtFiyat.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtTutar.Properties)).EndInit();
@@ -581,8 +610,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
 			this.xtraTabControl1.ResumeLayout(false);
 			this.xtraTabPage2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.txtFirma.Properties)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.txtFaturaId.Properties)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.cmbCariTürü.Properties)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -637,5 +665,7 @@
 		private DevExpress.XtraEditors.TextEdit txtFaturaId;
 		private DevExpress.XtraEditors.LabelControl labelControl15;
 		private DevExpress.XtraEditors.SimpleButton simpleButton1;
+		private System.Windows.Forms.Label label1;
+		private DevExpress.XtraEditors.ComboBoxEdit cmbCariTürü;
 	}
 }

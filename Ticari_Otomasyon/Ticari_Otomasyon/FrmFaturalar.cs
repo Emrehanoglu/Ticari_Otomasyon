@@ -54,7 +54,7 @@ namespace Ticari_Otomasyon
 
 		private void btnKaydet_Click(object sender, EventArgs e)
 		{
-			if(txtPersonel.Text == "")
+			if(txtPersonel.Text == "" && cmbCariTürü.Text == "Firma")
 			{
 				SqlCommand faturabilgi = new SqlCommand("insert into Tbl_FaturaBilgi (Seri,SiraNo,Tarih,Saat,VergiDaire,Alici,TeslimEden,TeslimAlan) " +
 					"values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)",baglan.baglanti());
@@ -105,6 +105,64 @@ namespace Ticari_Otomasyon
 
 				//Stok Sayısını Azaltma
 				SqlCommand stokAzalt = new SqlCommand("update Tbl_Urunler set Adet = Adet-@p1 where Id=@p2",baglan.baglanti());
+				stokAzalt.Parameters.AddWithValue("@p1", txtMiktar.Text);
+				stokAzalt.Parameters.AddWithValue("@p2", txtUrunId.Text);
+				stokAzalt.ExecuteNonQuery();
+				baglan.baglanti().Close();
+			}
+
+
+			if (txtPersonel.Text == "" && cmbCariTürü.Text == "Müşteri")
+			{
+				SqlCommand faturabilgi = new SqlCommand("insert into Tbl_FaturaBilgi (Seri,SiraNo,Tarih,Saat,VergiDaire,Alici,TeslimEden,TeslimAlan) " +
+					"values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", baglan.baglanti());
+				faturabilgi.Parameters.AddWithValue("@p1", txtSeri.Text);
+				faturabilgi.Parameters.AddWithValue("@p2", txtSiraNo.Text);
+				faturabilgi.Parameters.AddWithValue("@p3", maskTxtTarih.Text);
+				faturabilgi.Parameters.AddWithValue("@p4", maskTxtSaat.Text);
+				faturabilgi.Parameters.AddWithValue("@p5", txtVergiDaire.Text);
+				faturabilgi.Parameters.AddWithValue("@p6", txtAlici.Text);
+				faturabilgi.Parameters.AddWithValue("@p7", txtTeslimEden.Text);
+				faturabilgi.Parameters.AddWithValue("@p8", txtTeslimAlan.Text);
+				faturabilgi.ExecuteNonQuery();
+				baglan.baglanti().Close();
+				MessageBox.Show("Fatura Bilgisi Sisteme Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Listele();
+				Temizle();
+			}
+			else
+			{
+				double fiyat, miktar;
+				fiyat = double.Parse(txtFiyat.Text);
+				miktar = double.Parse(txtMiktar.Text);
+				txtTutar.Text = (fiyat * miktar).ToString();
+
+				SqlCommand faturadetay = new SqlCommand("insert into Tbl_FaturaDetay (UrunAd,Miktar,Fiyat,Tutar,FaturaId) " +
+					"values (@p1,@p2,@p3,@p4,@p5)", baglan.baglanti());
+				faturadetay.Parameters.AddWithValue("@p1", txtUrun.Text);
+				faturadetay.Parameters.AddWithValue("@p2", txtMiktar.Text);
+				faturadetay.Parameters.AddWithValue("@p3", decimal.Parse(txtFiyat.Text));
+				faturadetay.Parameters.AddWithValue("@p4", decimal.Parse(txtTutar.Text));
+				faturadetay.Parameters.AddWithValue("@p5", txtPersonel.Text);
+				faturadetay.ExecuteNonQuery();
+				baglan.baglanti().Close();
+
+				//Firma Hareket Tablosu
+				SqlCommand komut2 = new SqlCommand("insert into Tbl_MüşteriHareketler (UrunId,Adet,Personel,Musteri,Fiyat,Toplam,FaturaId,Tarih) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", baglan.baglanti());
+				komut2.Parameters.AddWithValue("@p1", txtUrunId.Text);
+				komut2.Parameters.AddWithValue("@p2", txtMiktar.Text);
+				komut2.Parameters.AddWithValue("@p3", txtPersonel.Text);
+				komut2.Parameters.AddWithValue("@p4", txtFirma.Text);
+				komut2.Parameters.AddWithValue("@p5", decimal.Parse(txtFiyat.Text));
+				komut2.Parameters.AddWithValue("@p6", decimal.Parse(txtTutar.Text));
+				komut2.Parameters.AddWithValue("@p7", txtFaturaId.Text);
+				komut2.Parameters.AddWithValue("@p8", maskTxtTarih.Text);
+				komut2.ExecuteNonQuery();
+				MessageBox.Show("Başarıyla Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				baglan.baglanti().Close();
+
+				//Stok Sayısını Azaltma
+				SqlCommand stokAzalt = new SqlCommand("update Tbl_Urunler set Adet = Adet-@p1 where Id=@p2", baglan.baglanti());
 				stokAzalt.Parameters.AddWithValue("@p1", txtMiktar.Text);
 				stokAzalt.Parameters.AddWithValue("@p2", txtUrunId.Text);
 				stokAzalt.ExecuteNonQuery();
