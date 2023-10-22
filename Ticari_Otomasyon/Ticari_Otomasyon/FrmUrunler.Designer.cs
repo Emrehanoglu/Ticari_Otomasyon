@@ -288,7 +288,7 @@
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FrmUrunler";
-			this.Text = "FrmUrunler";
+			this.Text = "Urunler";
 			this.Load += new System.EventHandler(this.FrmUrunler_Load);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

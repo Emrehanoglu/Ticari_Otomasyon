@@ -123,7 +123,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "FrmMail";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FrmMail";
+			this.Text = "Mail";
 			this.Load += new System.EventHandler(this.FrmMail_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

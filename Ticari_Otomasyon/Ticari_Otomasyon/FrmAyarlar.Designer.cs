@@ -111,7 +111,7 @@
 			// 
 			// btnKaydet
 			// 
-			this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+			this.btnKaydet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKaydet.ImageOptions.Image")));
 			this.btnKaydet.Location = new System.Drawing.Point(24, 287);
 			this.btnKaydet.Name = "btnKaydet";
 			this.btnKaydet.Size = new System.Drawing.Size(93, 35);
@@ -137,7 +137,7 @@
 			this.MinimizeBox = false;
 			this.Name = "FrmAyarlar";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FrmAyarlar";
+			this.Text = "Ayarlar";
 			this.Load += new System.EventHandler(this.FrmAyarlar_Load);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

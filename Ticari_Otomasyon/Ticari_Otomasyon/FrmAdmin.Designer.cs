@@ -112,7 +112,7 @@
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "FrmAdmin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FrmAdmin";
+			this.Text = "Admin";
 			this.Load += new System.EventHandler(this.FrmAdmin_Load);
 			((System.ComponentModel.ISupportInitialize)(this.txtKullaniciAdi.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtSifre.Properties)).EndInit();

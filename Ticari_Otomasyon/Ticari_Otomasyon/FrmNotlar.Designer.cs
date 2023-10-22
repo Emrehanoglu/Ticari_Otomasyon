@@ -262,7 +262,7 @@
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FrmNotlar";
-			this.Text = "FrmNotlar";
+			this.Text = "Notlar";
 			this.Load += new System.EventHandler(this.FrmNotlar_Load);
 			((System.ComponentModel.ISupportInitialize)(this.txtBaslik.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtHitap.Properties)).EndInit();

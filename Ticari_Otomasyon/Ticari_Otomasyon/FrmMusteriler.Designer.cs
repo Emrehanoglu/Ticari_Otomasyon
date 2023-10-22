@@ -333,7 +333,7 @@
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FrmMusteriler";
-			this.Text = "FrmMusteriler";
+			this.Text = "Müşteriler";
 			this.Load += new System.EventHandler(this.FrmMusteriler_Load);
 			((System.ComponentModel.ISupportInitialize)(this.txtSoyad.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.txtAd.Properties)).EndInit();

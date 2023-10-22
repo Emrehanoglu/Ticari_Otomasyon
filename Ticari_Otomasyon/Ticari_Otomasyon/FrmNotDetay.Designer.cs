@@ -52,7 +52,7 @@
 			this.MinimizeBox = false;
 			this.Name = "FrmNotDetay";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FrmNotDetay";
+			this.Text = "Not Detay";
 			this.Load += new System.EventHandler(this.FrmNotDetay_Load);
 			this.ResumeLayout(false);
 

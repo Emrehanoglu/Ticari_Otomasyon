@@ -311,7 +311,7 @@
 			this.Controls.Add(this.groupControl1);
 			this.Controls.Add(this.gridControl1);
 			this.Name = "FrmPersoneller";
-			this.Text = "FrmPersoneller";
+			this.Text = "Personeller";
 			this.Load += new System.EventHandler(this.FrmPersoneller_Load);
 			((System.ComponentModel.ISupportInitialize)(this.cmBoxİlçe.Properties)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cmBoxİl.Properties)).EndInit();
