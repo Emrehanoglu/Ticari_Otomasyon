@@ -1,4 +1,5 @@
-### DevExpress araçları,
+### Ticari Otomasyon 
+- DevExpress araçları,
 - DevExpress bileşenleri ile form tasarımları,
 - OOP tabanında "metot, sınıf, nesne" gibi kavramlar,
 - SQL (Select, Insert, Update, Delete, Create, Alter, Drop, Prosedür, Tetikleyici, Join, İlişkili Tablolar,
