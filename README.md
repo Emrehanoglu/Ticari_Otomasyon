@@ -1,9 +1,11 @@
-DevExpress araçları,
-DevExpress bileşenleri ile form tasarımları,
-OOP tabanında "metot, sınıf, nesne" gibi kavramlar,
-SQL (Select, Insert, Update, Delete, Create, Alter, Drop, Prosedür, Tetikleyici, Join, İlişkili Tablolar,
-Veri tabanında filtreleme işlemleri yapacak,
-Grafik, raporlama, dinamik araç oluşturma, point  
+### DevExpress araçları,
+- DevExpress bileşenleri ile form tasarımları,
+- OOP tabanında "metot, sınıf, nesne" gibi kavramlar,
+- SQL (Select, Insert, Update, Delete, Create, Alter, Drop, Prosedür, Tetikleyici, Join, İlişkili Tablolar,
+- Veri tabanında filtreleme işlemleri yapacak,
+- Grafik, raporlama, dinamik araç oluşturma, point
+
+------------
 
 ![1](https://github.com/Emrehanoglu/Ticari_Otomasyon/assets/72378457/c2fbf5d9-2eed-4096-867d-3cc8a348e763)
 ![4](https://github.com/Emrehanoglu/Ticari_Otomasyon/assets/72378457/1e9905f8-18d3-4818-bf03-16fd669b8ade)
