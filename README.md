@@ -3,7 +3,6 @@
 - DevExpress bileşenleri ile form tasarımları,
 - OOP tabanında "metot, sınıf, nesne" gibi kavramlar,
 - SQL (Select, Insert, Update, Delete, Create, Alter, Drop, Prosedür, Tetikleyici, Join, İlişkili Tablolar,
-- Veri tabanında filtreleme işlemleri yapacak,
 - Grafik, raporlama, dinamik araç oluşturma, point
 
 ------------
